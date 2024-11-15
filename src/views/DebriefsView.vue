@@ -12,12 +12,106 @@
           aria-expanded="true"
           aria-controls="collapse14"
         >
-          Project 14: Casino deposit currency
+          Project 15: Casino deposit 3ds
         </button>
       </h2>
       <div
         id="collapse14"
         class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arif, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work, no coding required :)</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                3D Secure settings are displayed when configuring gateway
+                account with non payment card methods.
+              </li>
+              <li class="mb-2">
+                Property description from API definitions are not displayed by
+                Recomm for gateway account settings and credential fields. In
+                API definitions "threeDSecureServer.threeRIInd" has "Indicates
+                the type of 3RI request. Values 06 - 11 are only supported in
+                3DS 2.2.0." Recomm does not display it.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/15/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Broken link "Test a generic 3DS flow" on
+                https://www.rebilly.com/docs/settings/set-up-a-gateway and
+                https://www.rebilly.com/docs/settings/3ds pages.
+              </li>
+              <li class="mb-2">
+                3DS pill on transactions details page is not showing 3ds flow
+                (challenge or frictionless) and 3ds version used.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/15/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p>
+                  Need more tests cards. We were able to get approved
+                  transaction with 3ds frictionless flow using Rebilly test card
+                  issued by Canadian bank (5555555555554444).
+                </p>
+                <p>
+                  We were unable to get approved transaction with 3ds challenge
+                  flow using Rebilly test card issued by Canadian bank
+                  (5105105105105100), it results in 3ds frictionless flow not
+                  authenticated.
+                </p>
+                <p>
+                  We used
+                  https://docs.3dsecure.io/3dsv2/sandbox.html#challenge-flow
+                  docs to generate a test card with bin `555555` (linked to
+                  Canada) and last4 xx72 to trigger and test manual 3ds
+                  challenge, but after 3ds completion transaction was declined
+                  by test sandbox gateway, because this generated card is not supported (as expected). 
+                  To get approved 3ds transaction for this card we cheated, we checked TestProcessor code, and used magic amount of $71.00.
+                </p>
+              </li>
+              <li class="mb-2">
+                After 3ds failed a message is shown "3DS failed or abandoned by player". This is incorrect, our pages should not mention any relation to casino.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/15/scr3.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Clicking on "Choose another payment method" after failed 3ds redirected us to hosted payment form the casion website breaking the seamless UX.
+                Seems this flow is not supported by Rebilly Instruments natively?
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapse14"
+          aria-expanded="true"
+          aria-controls="collapse14"
+        >
+          Project 14: Casino deposit currency
+        </button>
+      </h2>
+      <div
+        id="collapse14"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -55,7 +149,9 @@
               <li class="mb-2">
                 Search results are unrelevant, even search by exact title
                 results in non relevant results at the top, while exact match is
-                somewhere hidden down the scroll. Default search mode "All" prioritize API docs, most users wants to search documentation instead.
+                somewhere hidden down the scroll. Default search mode "All"
+                prioritize API docs, most users wants to search documentation
+                instead.
                 <div class="mt-4">
                   <img src="../assets/debriefs/14/scr4.png" />
                 </div>
