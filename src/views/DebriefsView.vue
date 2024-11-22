@@ -28,8 +28,8 @@
           <div>
             <strong>What made you smile?</strong>
             <p>
-              Team work, payout form implementation was straighforward,
-              copy-pasted code from deposit forms.
+              Team work, payout form implementation was straightforward,
+              copy-pasted the code from deposit forms.
             </p>
           </div>
           <div>
