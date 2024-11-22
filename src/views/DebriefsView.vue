@@ -1,13 +1,6 @@
 <template>
   <h1>Debriefs</h1>
 
-
-  <!-- 
-  
-  
-
-  -->
-
   <div class="accordion" id="debriefs">
     <div class="accordion-item">
       <h2 class="accordion-header">
@@ -15,15 +8,15 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#collapse14"
+          data-bs-target="#collapse15"
           aria-expanded="true"
-          aria-controls="collapse14"
+          aria-controls="collapse15"
         >
           Project 15: Casino deposit 3ds
         </button>
       </h2>
       <div
-        id="collapse14"
+        id="collapse15"
         class="accordion-collapse collapse show"
         data-bs-parent="#debriefs"
       >
@@ -83,19 +76,25 @@
                   docs to generate a test card with bin `555555` (linked to
                   Canada) and last4 xx72 to trigger and test manual 3ds
                   challenge, but after 3ds completion transaction was declined
-                  by test sandbox gateway, because this generated card is not supported (as expected). 
-                  To get approved 3ds transaction for this card we cheated, we checked TestProcessor code, and used magic amount of $71.00.
+                  by test sandbox gateway, because this generated card is not
+                  supported (as expected). To get approved 3ds transaction for
+                  this card we cheated, we checked TestProcessor code, and used
+                  magic amount of $71.00.
                 </p>
               </li>
               <li class="mb-2">
-                After 3ds failed a message is shown "3DS failed or abandoned by player". This is incorrect, our pages should not mention any relation to casino.
+                After 3ds failed a message is shown "3DS failed or abandoned by
+                player". This is incorrect, our pages should not mention any
+                relation to casino.
                 <div class="mt-4">
                   <img src="../assets/debriefs/15/scr3.png" />
                 </div>
               </li>
               <li class="mb-2">
-                Clicking on "Choose another payment method" after failed 3ds redirected us to hosted payment form the casion website breaking the seamless UX.
-                Seems this flow is not supported by Rebilly Instruments natively?
+                Clicking on "Choose another payment method" after failed 3ds
+                redirected us to hosted payment form the casion website breaking
+                the seamless UX. Seems this flow is not supported by Rebilly
+                Instruments natively?
               </li>
             </ul>
           </div>
