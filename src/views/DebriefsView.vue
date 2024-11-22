@@ -1,6 +1,13 @@
 <template>
   <h1>Debriefs</h1>
 
+
+  <!-- 
+  
+  
+
+  -->
+
   <div class="accordion" id="debriefs">
     <div class="accordion-item">
       <h2 class="accordion-header">

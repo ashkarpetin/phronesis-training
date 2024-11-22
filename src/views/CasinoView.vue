@@ -1,3 +1,10 @@
+<script setup>
+import { ref } from 'vue';
+
+const selectedCurrency = ref('USD');
+const amount = ref(100);
+</script>
+
 <template>
   <section class="promotions-section py-5 bg-light">
     <div class="container">
@@ -36,11 +43,39 @@
         <div class="col-md-6">
           <div class="card promo-card shadow-sm">
             <div class="card-body text-center">
-              <h5 class="card-title">Weekly Free Spins</h5>
+              <h5 class="card-title">Win Big, Withdraw Anytime!</h5>
               <p class="card-text">
-                Enjoy free spins every week on our top slot games.
+                No waiting, no hassle - enjoy the thrill of winning and cash
+                out.
               </p>
-              <button class="btn btn-primary">Claim Offer</button>
+              <div class="row">
+                <div class="col">
+                  <input
+                    type="number"
+                    v-model="amount"
+                    class="form-control mb-3"
+                    placeholder="Enter amount"
+                    value="100"
+                  />
+                </div>
+
+                <div class="col">
+                  <select v-model="selectedCurrency" class="form-select mb-3">
+                    <option value="USD">USD</option>
+                    <option value="CAD">CAD</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <RouterLink
+                    :to="`/payout/${selectedCurrency}?amount=${amount}`"
+                    class="btn btn-primary"
+                  >
+                    Withdraw
+                  </RouterLink>
+                </div>
+              </div>
             </div>
           </div>
         </div>
