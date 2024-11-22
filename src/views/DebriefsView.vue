@@ -8,6 +8,152 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse16"
+          aria-expanded="true"
+          aria-controls="collapse16"
+        >
+          Project 16: Casino payout form
+        </button>
+      </h2>
+      <div
+        id="collapse16"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arif, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>
+              Team work, payout form implementation was straighforward,
+              copy-pasted code from deposit forms.
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                For bank transfer payment method, Rebilly instruments shows text
+                "After confirmation, you will be prompted to complete your
+                purchase securely". Phrase "purchase" seems incorrect for
+                payout. Also not sure if alternative method "bank-transfer" can
+                be used for payouts at all.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/16/scr1.png" />
+                </div>
+
+                If only bank transfer payment method is available, Rebilly
+                instruments doesn't show any payment methods info.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/16/scr1.1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                We couldn't find payment cards in our docs to test payout
+                outcomes: approved or declined. We tried test card
+                4111111111111111 with payout amount $100 USD and it resulted in
+                unknown/timeout transaction. Then we checked TestProcessor, and
+                found out that there are several undocumented tests cards, and
+                magic amounts to get desired payout result. For example, to get
+                approved payout send amount less than or equal to $50 USD, to
+                get declined send greater $250 USD.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/16/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Payout request events like "Payout request created", "Instrument
+                selected", "Payout request canceled", "Payout request allocated"
+                are not shown in customer timeline (for example,
+                https://app-sandbox.rebilly.com/phronesis-bill-flow/customers/foobar).
+                <div class="mt-4">
+                  <img src="../assets/debriefs/16/scr3.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                On payout request details page:
+                <ul>
+                  <li>
+                    exposure column is empty, although API returns the value.
+                  </li>
+                  <li>
+                    payout time is not accounting for time zone, API returns
+                    last payment and payout time in wrong time format without
+                    timezone (should be 2024-11-08T10:18:34+00:00 instead of
+                    2024-11-08 10:18:34)
+                  </li>
+                </ul>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/16/scr4.png" />
+                </div>
+              </li>
+
+              <li class="mb-2">
+                On payout request details page:
+                <ul>
+                  <li>
+                    Gateway column displays only gateway name. Without ID it is
+                    hard to identify gateway with the same name.
+                  </li>
+                  <li>Seems there is a typo in "Amount Requests" text.</li>
+                </ul>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/16/scr5.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                "Re-allocate" button does not re-allocate, but creates new
+                allocation instead. Button should be renamed.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/16/scr6.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Transaction filters by deposit request ID and payout request ID
+                are missing.
+              </li>
+              <li class="mb-2">
+                Total remaining doesn't match total minus previously allocated.
+                Declined and unknown transactions are counting towards remaining
+                (PayoutRequest::getRemainingAmount - counts even declined
+                transactions), but not shown anywhere on the page. On the
+                example screen: payout request amount is $1000, remaining is
+                shown $250.00. In reality we have: 1 approved payout of $49, 1
+                declined of $500, and 1 unknown of $201.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/16/scr7.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                After payout request is fulfilled an empty page is shown with
+                horizontal line without any explanation or text.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/16/scr8.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Creating a payout doesn't respect gateway account settings as it
+                still picks gateways that should not be available due to
+                configuration. Gateway payout settings are not respected at
+                allocations screen in Recomm (at least a warning would be great)
+                With "Approved payments" mode you can still pick payment
+                instrument without payments.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse15"
           aria-expanded="true"
           aria-controls="collapse15"
@@ -17,7 +163,7 @@
       </h2>
       <div
         id="collapse15"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
