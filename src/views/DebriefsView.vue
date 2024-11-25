@@ -131,7 +131,7 @@
                 After payout request is fulfilled an empty page is shown with
                 horizontal line without any details. Probably existing request
                 allocations with transaction amount, result, and gateway should
-                be displayed intead.
+                be displayed instead.
                 <div class="mt-4">
                   <img src="../assets/debriefs/16/scr8.png" />
                 </div>
