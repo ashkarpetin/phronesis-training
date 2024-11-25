@@ -77,10 +77,10 @@
                 On payout request details page:
                 <ul>
                   <li>
-                    exposure column is empty, although API returns the value.
+                    Exposure column is empty, although API returns the value.
                   </li>
                   <li>
-                    payout time is not accounting for time zone, API returns
+                    Payout time is not accounting for time zone, API returns
                     last payment and payout time in wrong time format without
                     timezone (should be 2024-11-08T10:18:34+00:00 instead of
                     2024-11-08 10:18:34)
@@ -129,7 +129,9 @@
               </li>
               <li class="mb-2">
                 After payout request is fulfilled an empty page is shown with
-                horizontal line without any explanation or text.
+                horizontal line without any details. Probably existing request
+                allocations with transaction amount, result, and gateway should
+                be displayed intead.
                 <div class="mt-4">
                   <img src="../assets/debriefs/16/scr8.png" />
                 </div>
