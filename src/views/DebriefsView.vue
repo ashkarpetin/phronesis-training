@@ -12,12 +12,76 @@
           aria-expanded="true"
           aria-controls="collapse16"
         >
-          Project 16: Casino payout form
+          Project 17: Casino payout payment methods
         </button>
       </h2>
       <div
         id="collapse16"
         class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arif, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work, no coding required :).</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                As it was not clearly stated which player location to use
+                (primary address, risk score, risk metadata country, or currency
+                driven one) we decided to use currency for simplicity, but
+                filters are quite similar for any case.
+              </li>
+              <li class="mb-2">
+                After configuring Ready To Payout action `echeck` method is not
+                displayed by Instruments, although it was returned in API
+                response.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/17/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Instruments doesn't handle single method UI rendering (API
+                returned 2 methods, but `echeck` method is not supported, so
+                only Interac is rendered). Method name or method logo are missing.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/17/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Currency symbol for amount in data tables might be misleading as currency column is not enabled by default. Should we use CA$?
+                <div class="mt-4">
+                  <img src="../assets/debriefs/17/scr3.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapse16"
+          aria-expanded="true"
+          aria-controls="collapse16"
+        >
+          Project 16: Casino payout form
+        </button>
+      </h2>
+      <div
+        id="collapse16"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
