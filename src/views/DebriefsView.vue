@@ -34,9 +34,28 @@
             <ul>
               <li class="mb-2">
                 As it was not clearly stated which player location to use
-                (primary address, risk score, risk metadata country, or currency
-                driven one) we decided to use currency for simplicity, but
-                filters are quite similar for any case.
+                (customer primary address, risk score, risk metadata country, or
+                currency driven one) we decided to use currency for simplicity,
+                but filters are quite similar for any case.
+              </li>
+              <li class="mb-2">
+                Billing address that can be sent with RTP payload is missing in
+                rule engine conditions for the "Ready to payout requested" event
+                (<a
+                  href="https://www.rebilly.com/catalog/all/storefront-purchases/storefrontpostreadytopayout#storefront-purchases/storefrontpostreadytopayout/t=request&path=billingaddress"
+                  target="_blank"
+                  >API defs link</a
+                >).
+                <div class="mt-4">
+                  <img src="../assets/debriefs/17/scr4.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                The "Ready to Payout Requested" event conditions include
+                unrelated transactions criteria, they should be removed.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/17/scr5.png" />
+                </div>
               </li>
               <li class="mb-2">
                 After configuring Ready To Payout action `echeck` method is not
@@ -49,13 +68,15 @@
               <li class="mb-2">
                 Instruments doesn't handle single method UI rendering (API
                 returned 2 methods, but `echeck` method is not supported, so
-                only Interac is rendered). Method name or method logo are missing.
+                only Interac is rendered). Method name or method logo are
+                missing.
                 <div class="mt-4">
                   <img src="../assets/debriefs/17/scr2.png" />
                 </div>
               </li>
               <li class="mb-2">
-                Currency symbol for amount in data tables might be misleading as currency column is not enabled by default. Should we use CA$?
+                Currency symbol for amount in data tables might be misleading as
+                currency column is not enabled by default. Should we use CA$?
                 <div class="mt-4">
                   <img src="../assets/debriefs/17/scr3.png" />
                 </div>
