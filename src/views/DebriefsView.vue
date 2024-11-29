@@ -51,7 +51,7 @@
                 </div>
               </li>
               <li class="mb-2">
-                "Ready to Payout Requested" event conditions include
+                "Ready to payout requested" event conditions include
                 unrelated transactions criteria, they should be removed.
                 <div class="mt-4">
                   <img src="../assets/debriefs/17/scr5.png" />
