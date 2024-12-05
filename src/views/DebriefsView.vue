@@ -8,16 +8,124 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#collapse16"
+          data-bs-target="#collapse18"
           aria-expanded="true"
-          aria-controls="collapse16"
+          aria-controls="collapse18"
+        >
+          Project 18: Add digital wallets to deposit flow
+        </button>
+      </h2>
+      <div
+        id="collapse18"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arif, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work, no coding required :).</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                Gateway account payment card brand icons are duplicating for
+                Visa/Electron/Voyager, Switch/Solo, without labels it looks
+                buggy. Not sure why are we still showing old legacy brands
+                absorbed by Mastercard/Visa?
+                <div class="mt-4">
+                  <img src="../assets/debriefs/18/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Nothing in docs stated there is a toggle to enable digital
+                wallets (neither Apple Pay nor Google Pay).
+              </li>
+              <li class="mb-2">
+                Apple Pay & Google Pay docs sole purpose is to describe FramePay
+                setup, no Instruments details except a couple of properties in
+                configuration reference.
+              </li>
+              <li class="mb-2">
+                No testing Google Pay docs at all, googled this data to complete
+                the training.
+              </li>
+              <li class="mb-2">
+                Previously existing or deactivated payment instrument is getting
+                reactivated without digital wallet flag, even when created with
+                digital wallet token (see
+                <a
+                  href="https://github.com/Rebilly/rebilly/blob/0f055b08b44b003aa0df0732bc5f8fb08cf57b6e/backend/core/src/Component/PaymentInstrument/PaymentCard/Service/CreatePaymentCard.php#L59C18-L59C36"
+                  target="_blank"
+                  >CreatePaymentCard</a
+                >). Our
+                <a
+                  href="https://app-sandbox.rebilly.com/phronesis-bill-flow/customers/foobar"
+                  target="_blank"
+                  >existing customer</a
+                >
+                already had an attached test card `4111111111111111`, after
+                paying with Google Pay test card with same pan, transaction and
+                payment instrument were not recognized as digit wallet ones. We
+                deactivated the card, but got the same outcome.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/18/scr2.png" />
+                </div>
+
+                We tried with a brand
+                <a
+                  href="https://app-sandbox.rebilly.com/phronesis-bill-flow/customers/Buzz-Lightyear"
+                  target="_blank"
+                  >new customer</a
+                >
+                without any payment cards, and it worked as expected.
+
+                <div class="mt-4">
+                  <img src="../assets/debriefs/18/scr3.png" />
+                </div>
+              </li>
+
+              <li class="mb-2">
+                Apple Pay could not be tested without enrolling in Apple
+                Developer Program (which is a paid thing, not available in some
+                locations, no access found in Bitwarden as well). Later found
+                that Apple Developer Program access is managed by Colin and
+                handled on an invitation basis, no pre-created Apple ID exists
+                as well as info on how to use it. We found a
+                <a
+                  href="https://rebilly.slack.com/archives/C7U0AHYJ0/p1720152480728579"
+                  target="_blank"
+                  >Slack thread</a
+                >
+                with Junyong requesting access and getting a test Apple ID,
+                though we have no idea on how to use it properly.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapse17"
+          aria-expanded="true"
+          aria-controls="collapse17"
         >
           Project 17: Casino payout payment methods
         </button>
       </h2>
       <div
-        id="collapse16"
-        class="accordion-collapse collapse show"
+        id="collapse17"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -51,8 +159,8 @@
                 </div>
               </li>
               <li class="mb-2">
-                "Ready to payout requested" event conditions include
-                unrelated transactions criteria, they should be removed.
+                "Ready to payout requested" event conditions include unrelated
+                transactions criteria, they should be removed.
                 <div class="mt-4">
                   <img src="../assets/debriefs/17/scr5.png" />
                 </div>
