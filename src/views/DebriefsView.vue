@@ -104,6 +104,22 @@
                 with Junyong requesting access and getting a test Apple ID,
                 though we have no idea on how to use it properly.
               </li>
+
+              <li class="mb-2">
+                We noticed that digital wallet logo is display in Recomm for
+                Apple Pay/Google Pay cards but missing on a Instruments payment
+                form. Not sure if it is bug or feature.
+
+                Recomm:
+                <div class="mt-4">
+                  <img src="../assets/debriefs/18/scr4.png" />
+                </div>
+
+                Instruments:
+                <div class="mt-4">
+                  <img src="../assets/debriefs/18/scr5.png" />
+                </div>
+              </li>
             </ul>
           </div>
         </div>
