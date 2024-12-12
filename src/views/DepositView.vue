@@ -3,19 +3,36 @@ import { onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import RebillyInstruments from '@rebilly/instruments';
 import { APP_CONFIG } from '../config';
-import { getCustomerJwt, rebillyApi } from '../api-client';
+import { getCustomerJwt, getCustomers, rebillyApi } from '../api-client';
+import { ref } from 'vue';
 
 const route = useRoute();
+const customers = ref([]);
+const selectedCustomer = ref(null);
+onMounted(init);
 
-onMounted(initDeposit);
+async function init() {
+  customers.value = await getCustomers();
+}
 
 async function initDeposit() {
-  const jwt = await getCustomerJwt(APP_CONFIG.customerId);
+  let customerId = selectedCustomer.value;
+  if (!customerId) {
+    // create new customer
+    const { fields: customer } = await rebillyApi.customers.create({
+      data: {
+        websiteId: APP_CONFIG.websiteId,
+        email: 'test@test.com',
+      },
+    });
+    customerId = customer.id;
+  }
+  const jwt = await getCustomerJwt(customerId);
 
   const { fields: depositRequest } = await rebillyApi.depositRequests.create({
     data: {
       websiteId: APP_CONFIG.websiteId,
-      customerId: APP_CONFIG.customerId,
+      customerId: customerId,
       currency: route.params.currency,
     },
   });
@@ -33,6 +50,17 @@ async function initDeposit() {
 <template>
   <h2>Make deposit</h2>
   <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="customer-picker">
+          <select v-model="selectedCustomer" class="form-select">
+            <option value="" selected>New customer</option>
+            <option v-for="customer in customers" :key="customer.id" :value="customer.id" v-text="customer.lastName || customer.firstName ? `${customer.firstName} ${customer.lastName}` : customer.id"></option>
+          </select>
+          <button @click="initDeposit" class="btn btn-primary">Initiate deposit</button>
+        </div>
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-6 mx-auto">
         <div class="rebilly-instruments"></div>

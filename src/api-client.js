@@ -6,6 +6,15 @@ export const rebillyApi = RebillyAPI({
   apiKey: APP_CONFIG.apiKey,
 });
 
+export async function getCustomers() {
+  const { items: customers } = await rebillyApi.customers.getAll({
+    data: {
+      websiteId: APP_CONFIG.websiteId,
+    },
+  });
+  return customers.map(({ fields }) => fields);
+}
+
 export async function getCustomerJwt(customerId) {
   const { fields: authenticationToken } =
     await rebillyApi.customerAuthentication.login({
