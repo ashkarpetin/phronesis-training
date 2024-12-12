@@ -50,15 +50,28 @@ async function initDeposit() {
 <template>
   <h2>Make deposit</h2>
   <div class="container">
-    <div class="row">
-      <div class="col-md-6 mx-auto">
+    <div class="row justify-content-md-center">
+      <div class="col col-lg-2">
         <div class="customer-picker">
           <select v-model="selectedCustomer" class="form-select">
             <option value="" selected>New customer</option>
-            <option v-for="customer in customers" :key="customer.id" :value="customer.id" v-text="customer.lastName || customer.firstName ? `${customer.firstName} ${customer.lastName}` : customer.id"></option>
+            <option
+              v-for="customer in customers"
+              :key="customer.id"
+              :value="customer.id"
+              v-text="
+                customer.lastName || customer.firstName
+                  ? `${customer.firstName} ${customer.lastName}`
+                  : customer.id
+              "
+            ></option>
           </select>
-          <button @click="initDeposit" class="btn btn-primary">Initiate deposit</button>
         </div>
+      </div>
+      <div class="col col-lg-2">
+        <button @click="initDeposit" class="btn btn-primary">
+            Initiate deposit
+        </button>
       </div>
     </div>
     <div class="row">

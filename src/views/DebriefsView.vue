@@ -8,6 +8,71 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse19"
+          aria-expanded="true"
+          aria-controls="collapse19"
+        >
+          Project 19: VIP customers
+        </button>
+      </h2>
+      <div
+        id="collapse19"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arif, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>
+              Team work, the project was straightforward and easy to implement
+              :).
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                "Customer updated" event is misssing in
+                <a
+                  href="https://www.rebilly.com/docs/automations/event-types"
+                  target="_blank"
+                  >docs</a
+                >
+                while it is available in rules engine, email notifications and
+                webhooks.
+              </li>
+              <li class="mb-2">
+                Rule engine "Lock/Unlock" button has static tooltip "Unlock
+                order" even if order is already unlocked.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/19/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Initially we used "Transaction processed" event for tagging VIP
+                customers based on revenue, but it was not working as expected,
+                and customer was not tagged. It turned out that customer metrics
+                are updated on "Transaction approved" event, and "Transaction
+                processed" event handlers are executed earlier, and during that
+                time customer metrics are not updated yet. It worked, after we
+                updated tag rule to use "Customer updated" event.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse18"
           aria-expanded="true"
           aria-controls="collapse18"
@@ -17,7 +82,7 @@
       </h2>
       <div
         id="collapse18"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -88,7 +153,6 @@
                   <img src="../assets/debriefs/18/scr3.png" />
                 </div>
               </li>
-
               <li class="mb-2">
                 Apple Pay could not be tested without enrolling in Apple
                 Developer Program (which is a paid thing, not available in some
@@ -104,13 +168,10 @@
                 with Junyong requesting access and getting a test Apple ID,
                 though we have no idea on how to use it properly.
               </li>
-
               <li class="mb-2">
                 We noticed that digital wallet logo is display in Recomm for
                 Apple Pay/Google Pay cards but missing on a Instruments payment
-                form. Not sure if it is bug or feature.
-
-                Recomm:
+                form. Not sure if it is bug or feature. Recomm:
                 <div class="mt-4">
                   <img src="../assets/debriefs/18/scr4.png" />
                 </div>
