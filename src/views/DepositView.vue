@@ -51,7 +51,7 @@ async function initDeposit() {
   <h2>Make deposit</h2>
   <div class="container">
     <div class="row justify-content-md-center">
-      <div class="col col-lg-2">
+      <div class="col col-lg-3">
         <div class="customer-picker">
           <select v-model="selectedCustomer" class="form-select">
             <option value="" selected>New customer</option>
