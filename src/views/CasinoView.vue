@@ -22,7 +22,7 @@ const amount = ref(100);
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Claim Offer
+                  Old Deposit
                 </button>
                 <ul class="dropdown-menu">
                   <li>
@@ -32,6 +32,28 @@ const amount = ref(100);
                   </li>
                   <li>
                     <RouterLink to="/deposit/CAD" class="dropdown-item"
+                      >CAD</RouterLink
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown">
+                <button
+                  class="btn btn-primary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  New Deposit
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <RouterLink to="/new-deposit/USD" class="dropdown-item"
+                      >USD</RouterLink
+                    >
+                  </li>
+                  <li>
+                    <RouterLink to="/new-deposit/CAD" class="dropdown-item"
                       >CAD</RouterLink
                     >
                   </li>

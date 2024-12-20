@@ -15,6 +15,11 @@ export default [
     component: () => import('./views/DepositView.vue'),
   },
   {
+    path: '/new-deposit/:currency',
+    name: 'new-deposit',
+    component: () => import('./views/NewDepositView.vue'),
+  },
+  {
     path: '/payout/:currency',
     name: 'payout',
     component: () => import('./views/PayoutView.vue'),
