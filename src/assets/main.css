@@ -1,16 +1,16 @@
 :root {
-    --r-primary: var(--bs-primary);
-    --r-secondary: var(--bs-secondary);
-    --r-button-text-color: var(--bs-white);
-    --r-font-family: 'Inter', sans-serif;
-    --r-border-radius: 0;
-    --r-border-color: #AFE1AF;
+  --r-primary: var(--bs-primary);
+  --r-secondary: var(--bs-secondary);
+  --r-button-text-color: var(--bs-white);
+  --r-font-family: 'Inter', sans-serif;
+  --r-border-radius: 0;
+  --r-border-color: #afe1af;
 }
 
 * {
-    font-family: var(--r-font-family);
+  font-family: var(--r-font-family);
 }
 
 .accordion-body img {
-    max-width: 1024px;
+  max-width: 1024px;
 }

@@ -15,7 +15,7 @@ const amount = ref(100);
             <div class="card-body text-center">
               <h5 class="card-title">Welcome Bonus</h5>
               <p class="card-text">Get a 100% bonus on your first deposit.</p>
-              <div class="dropdown">
+              <div class="dropdown py-2">
                 <button
                   class="btn btn-primary dropdown-toggle"
                   type="button"
@@ -37,7 +37,7 @@ const amount = ref(100);
                   </li>
                 </ul>
               </div>
-              <div class="dropdown">
+              <div class="dropdown py-2">
                 <button
                   class="btn btn-primary dropdown-toggle"
                   type="button"

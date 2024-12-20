@@ -8,6 +8,110 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse20"
+          aria-expanded="true"
+          aria-controls="collapse20"
+        >
+          Project 20: Casino deposit improvements
+        </button>
+      </h2>
+      <div
+        id="collapse20"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arif, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>
+              Team work, the project was straightforward and easy to implement
+              :).
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                Google Places API is not available for any domain like it's
+                allowed in Instruments.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/20/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                "Play now" text on the button is not a generic text, it's casino
+                specific.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/20/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Missing verb in validation error text.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/20/scr3.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                "a multiple of 1" is not a user friendly error message.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/20/scr4.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                If you enter an amount in the "Other" field and switch back and
+                forth, the amount resets to the base deposit value ($10 in our
+                case).
+                <div class="mt-4">
+                  <img src="../assets/debriefs/20/scr5.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Google Pay is intended to be a single-click away from the
+                result, not a separate page. This was a part of their
+                requirements as far as I remember. Can't it be on the select
+                payment method view instead?
+                <div class="mt-4">
+                  <img src="../assets/debriefs/20/scr6.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                A lot of unknown CSP errors when accessing Google Pay.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/20/scr7.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Undesired "console.error" with code "google-pay-error" and
+                message "CANCELED" call when closing Google Pay modal without
+                selecting card.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/20/scr8.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Switch animation of brand logos when gateway account supports 5
+                or more card brands looks cheap. "Payment Card" probably should
+                be named in sentence case "Payment card".
+                <div class="mt-4">
+                  <img src="../assets/debriefs/20/scr9.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse19"
           aria-expanded="true"
           aria-controls="collapse19"
@@ -17,7 +121,7 @@
       </h2>
       <div
         id="collapse19"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
