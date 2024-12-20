@@ -36,6 +36,9 @@
             <strong>What did you find confusing?</strong>
             <ul>
               <li class="mb-2">
+                It is unclear from documentation what is the benefit of using one more library if Instruments already cover this case and why it's separate.
+              </li>
+              <li class="mb-2">
                 Google Places API is not available for any domain like it's
                 allowed in Instruments.
                 <div class="mt-4">
@@ -98,6 +101,12 @@
                 be named in sentence case "Payment card".
                 <div class="mt-4">
                   <img src="../assets/debriefs/20/scr9.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Using `e.g.` term is against UI copy style guide.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/20/scr10.png" />
                 </div>
               </li>
             </ul>
