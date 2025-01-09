@@ -8,6 +8,121 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse21"
+          aria-expanded="true"
+          aria-controls="collapse21"
+        >
+          Project 21: Casino fraud prevention
+        </button>
+      </h2>
+      <div
+        id="collapse21"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Egor, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work, no coding required :)</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                UI seems needs more polishing, we found it confusing. To enter
+                automated blocklists, you need to click Blocklists in settings
+                menu and then click on button "Automated blocklists" which is
+                not very obvious as buttons at the top right are used to create
+                a resource.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/21/scr1.png" />
+                </div>
+
+                Button "Update automated blocklists" also brings some confusion,
+                it is located at the same top right place, after clicking it
+                opens a form to edit all blocklist rules. We were trying to find
+                and click an "Edit" button to edit particular blocklist rule in
+                the table out of habit.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/21/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                No information on the page that `0` seconds is permanenent
+                block. It probably should be replaced with checkbox "Permanently
+                block".
+                <div class="mt-4">
+                  <img src="../assets/debriefs/21/scr3.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Proper validation for TTL values is missing (on backend and
+                frontend). Was able to enter and save negative TTL. Was able to
+                enter non integer TTL, after save it was casted to integer 0.
+                Was able to enter TTL greater than 0 but less than 30 second.
+                Validation rules should match with "Create blocklist" ones.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/21/scr4.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                No ability to delete a blocklist rule on update form, only
+                disable it, and I was not able to save the form because of
+                validation errors thrown by those inactive empty custom rules.
+                Only way to reset the form is to refresh the page.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/21/scr5-1.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/21/scr5-2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Issues related to "Permanently block payment cards when the
+                number of consecutive declined transactions exceeds 5". There is
+                no risk metadata factor which returns consecutive declines, so
+                we used "Declined payment instrument velocity" for the last 24
+                hours. We used deposit request form, and blocklist automation
+                did not work seems because risk factors are not calculated
+                correctly on "StorefrontPostPayment" API operation. We tried
+                created transaction in Recomm (which uses PostTransaction), and
+                automation worked, card was blocked.
+              </li>
+              <li class="mb-2">
+                Issues related to "Block payment cards for 3 hours when bank
+                country and billing country don't match" Seems there is bug in
+                changing existing billing address on an old deposit request
+                form. We used existing card 4000000000000002 with US bank
+                country and US billing address, tried to billing address country
+                to CA, but it was not saved, automation did not work. We tried
+                brand new card 4111111111111111 with US bank country and CA
+                billing address, and automation worked.
+              </li>
+              <li class="mb-2">
+                Issues related to "If a fraud dispute is raised on a payment
+                card transaction, automatically block the customer's payment
+                card from new transactions for 2 days". There are dispute type
+                "Fraud" and dispute category "Fraud" available. Maybe not clear
+                which is better to use. We used dispute type "Fraud" blocklist
+                condition, because we fetch fraud alerts from certain gateways
+                as dispute type "Fraud".
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse20"
           aria-expanded="true"
           aria-controls="collapse20"
@@ -17,7 +132,7 @@
       </h2>
       <div
         id="collapse20"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -36,7 +151,9 @@
             <strong>What did you find confusing?</strong>
             <ul>
               <li class="mb-2">
-                It is unclear from documentation what is the benefit of using one more library if Instruments already cover this case and why it's separate.
+                It is unclear from documentation what is the benefit of using
+                one more library if Instruments already cover this case and why
+                it's separate.
               </li>
               <li class="mb-2">
                 Google Places API is not available for any domain like it's
