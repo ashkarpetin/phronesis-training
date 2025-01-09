@@ -103,6 +103,13 @@
                 billing address, and automation worked.
               </li>
               <li class="mb-2">
+                Issues related to "Permanently block all IP addresses that use
+                VPN or Tor". VPN/Tor detection is disabled in sandbox
+                (HostShIpAddressDataAnalyzer enabled only on live). We tried
+                paid VPN on live, but IPs were not identified as VPN. So we were
+                not able to test this automation.
+              </li>
+              <li class="mb-2">
                 Issues related to "If a fraud dispute is raised on a payment
                 card transaction, automatically block the customer's payment
                 card from new transactions for 2 days". There are dispute type
