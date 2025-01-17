@@ -8,6 +8,92 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse22"
+          aria-expanded="true"
+          aria-controls="collapse22"
+        >
+          Project 22: Manage volume limits
+        </button>
+      </h2>
+      <div
+        id="collapse22"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Egor, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work, no coding required :)</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                Gateway account volume limits are calculated based on the
+                organization report currency. It is impossible to set limits in
+                specific currency (5,000 USD, 10,000 CAD). Our organization
+                report currency is EUR, so we set all limits in EUR during
+                training.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/22/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                "Edit" volume limit button has plus icon which is confusing.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/22/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                There is a 5 minutes lag when gateway enters a scheduled
+                downtime if usage limits reached. Gateway account usages
+                collection and limits check is done by cron every 5 minutes.
+                Docs don't mentions it and it is not obvious. Many people will
+                be confused that feature is not working as expected.
+              </li>
+              <li class="mb-2">
+                Scheduled downtime datetime format doesn't correspond to user
+                datetime format in settings. Not sure if it is bug.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/22/scr3.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/22/scr3.1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Timeline message also doesn't correspond to user time format
+                settings. Timeline message money limit only displays numbers but
+                not the currency.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/22/scr4.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Not related to the project, but noticed that report currency
+                dropdown is located in user profile which seeems wrong. Report
+                organization is organization wise, set during organization
+                creation and cannot be changed further.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/22/scr5.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse21"
           aria-expanded="true"
           aria-controls="collapse21"
@@ -17,7 +103,7 @@
       </h2>
       <div
         id="collapse21"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
