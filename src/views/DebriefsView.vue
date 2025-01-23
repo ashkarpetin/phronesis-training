@@ -8,6 +8,67 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse23"
+          aria-expanded="true"
+          aria-controls="collapse23"
+        >
+          Project 23: Integrate Checkout.com gateway
+        </button>
+      </h2>
+      <div
+        id="collapse23"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Egor, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>
+              Team work. The training was straightforward and easy to implement.
+              We signed up in CheckoutCom sandbox, created API key and started
+              testing.
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                Gateway communication logs appear in transactions timeline with
+                delay after transaction processed. Might be confusing for users
+                when they testing something: create transactions and try to
+                check logs immediately, but they are missing and require to
+                reload the page.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/23/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                We created CheckoutCom gateway with minimum setup by providing
+                only secret key. But during testing we got validation error from
+                CheckoutCom "processing_channel_id_required". After filling
+                "Processing channel ID" we were able to successfully create the
+                transaction. Looks like "Processing channel ID" should be a
+                required setting, but maybe it is only true for payment cards.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/23/scr2.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse22"
           aria-expanded="true"
           aria-controls="collapse22"
@@ -17,7 +78,7 @@
       </h2>
       <div
         id="collapse22"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
