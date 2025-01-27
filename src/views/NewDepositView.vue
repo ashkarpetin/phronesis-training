@@ -38,7 +38,7 @@ async function initDeposit() {
 
   RebillyCashier.renderDeposit({
     mountElement: mountElement.value,
-    token: depositRequest.cashierToken,
+    cashierToken: depositRequest.cashierToken,
   });
 }
 </script>
