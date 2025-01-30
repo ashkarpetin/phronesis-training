@@ -8,6 +8,74 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse24"
+          aria-expanded="true"
+          aria-controls="collapse24"
+        >
+          Project 24: Route 3DS with checkout.com on Rebilly
+        </button>
+      </h2>
+      <div
+        id="collapse24"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Egor, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>
+              Team work. The training was straightforward and easy to implement.
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                Initially we tried to configure routing using gateway account
+                additional filters, but then realized that we won't be able to
+                implement the requirements, so we used rules engine.
+              </li>
+              <li class="mb-2">
+                "Transaction type" select input is required field, but is not
+                highlighted when validation error is thrown.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/24/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                "Transaction type" has invalid placeholder "Required for v2". It
+                is a leftover when we supported 3DS1 as a fallback. After 3ds1
+                is not longer supported, transaction type is always required. We
+                need to fix placeholder.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/24/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Maybe add link to value list creation/update page if select is
+                empty or perhaps always show it. A lot of users including our
+                developers do not know about the existance of "Value lists"
+                functionality.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/24/scr3.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse23"
           aria-expanded="true"
           aria-controls="collapse23"
@@ -17,7 +85,7 @@
       </h2>
       <div
         id="collapse23"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
