@@ -64,6 +64,9 @@
                   <img src="../assets/debriefs/24/scr3.png" />
                 </div>
               </li>
+              <li class="mb-2">
+                We think it would be great for merchants to have examples for rules configuration, even we as experienced devs spent more than hour to set everything up.
+              </li>
             </ul>
           </div>
         </div>
@@ -1111,3 +1114,5 @@
     </div>
   </div>
 </template>
+<script setup lang="ts">
+</script>
