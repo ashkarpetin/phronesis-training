@@ -8,6 +8,107 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse25"
+          aria-expanded="true"
+          aria-controls="collapse25"
+        >
+          Project 25: Integrate Checkout.com dispute notifications
+        </button>
+      </h2>
+      <div
+        id="collapse25"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Egor, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>
+              Team work. The training was straightforward and easy to implement.
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                Domain part of the URL described in
+                <a
+                  href="https://www.rebilly.com/docs/settings/set-up-a-gateway#instant-payment-notifications-ipns"
+                  target="_blank"
+                  >docs</a
+                >
+                does not match with the one shown on gateway account page which
+                might be confusing.
+
+                <div class="mt-4">
+                  <img src="../assets/debriefs/25/scr1.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/25/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Created Rebilly dispute has category "uncategorized" while we
+                received category "fraudulent" and reason code "10.4" from
+                Checkout.com IPN.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/25/scr3.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/25/scr4.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <a
+                  href="https://www.rebilly.com/docs/automations/event-types#dispute-created"
+                  target="_blank"
+                  >Rebilly docs</a
+                >
+                states that "Dispute created" event should be on rules engine
+                core events page but it's not.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/25/scr5.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Filtering placeholder by "Dispute id" string doesn't narrow down
+                search result to one row.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/25/scr6.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Suggested placeholder for email notification "To" field
+                "dispute.customer.primaryAddress.emails.0.value" is incorrect
+                because "Dispute created" event doesn't have
+                <a
+                  href="https://www.rebilly.com/catalog/all/disputes/dispute-created#disputes/dispute-created/t=request&path=_embedded"
+                  target="_blank"
+                  >customer embedded</a
+                >. We spent a lot of time to figure out why emails notifications
+                were not sent, then we replaced "To" field with hardcoded emails
+                and it worked. Alternatively, we could use placeholder
+                "dispute.transaction.billingAddress.emails.0.value".
+                <div class="mt-4">
+                  <img src="../assets/debriefs/25/scr8.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse24"
           aria-expanded="true"
           aria-controls="collapse24"
@@ -17,7 +118,7 @@
       </h2>
       <div
         id="collapse24"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -65,7 +166,9 @@
                 </div>
               </li>
               <li class="mb-2">
-                We think it would be great for merchants to have examples for rules configuration, even we as experienced devs spent more than hour to set everything up.
+                We think it would be great for merchants to have examples for
+                rules configuration, even we as experienced devs spent more than
+                hour to set everything up.
               </li>
             </ul>
           </div>
@@ -1114,5 +1217,4 @@
     </div>
   </div>
 </template>
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
