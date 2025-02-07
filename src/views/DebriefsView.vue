@@ -92,9 +92,13 @@
                 >. We spent a lot of time to figure out why emails notifications
                 were not sent, then we replaced "To" field with hardcoded emails
                 and it worked. Alternatively, we could use placeholder
-                "dispute.transaction.billingAddress.emails.0.value".
-                <div class="mt-4">
+                "dispute.transaction.customer.primaryAddress.emails.0.value".
+                <div class="mt-4 mb-4">
                   <img src="../assets/debriefs/25/scr8.png" />
+                </div>
+                Invalid customer placeholders are shown when editing email content:
+                <div class="mt-4">
+                  <img src="../assets/debriefs/25/scr9.png" />
                 </div>
               </li>
             </ul>
