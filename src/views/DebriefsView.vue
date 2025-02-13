@@ -8,6 +8,67 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse26"
+          aria-expanded="true"
+          aria-controls="collapse26"
+        >
+          Project 26: Google Sheets integration
+        </button>
+      </h2>
+      <div
+        id="collapse26"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Egor, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>
+              The training was easy, took us around 15 minutes to complete it.
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                Fields are displayed in the wrong order, although API returns
+                them in the correct order. Reason code should be after dispute
+                ID.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/26/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                After clicking on "Test integration" button, and then on "Send
+                webhook" an error notification appears "Something went wrong,
+                please try again or contact support". No API requests are sent,
+                so it looks like a Recomm bug.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/26/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                It would be nice to be able to specify the sheet name to send
+                the data. Right now data is sent to the first list by default
+                which might not be good as sheet order might be changed by somebody, and the
+                data will be sent to the wrong sheet.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse25"
           aria-expanded="true"
           aria-controls="collapse25"
@@ -17,7 +78,7 @@
       </h2>
       <div
         id="collapse25"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -96,7 +157,8 @@
                 <div class="mt-4 mb-4">
                   <img src="../assets/debriefs/25/scr8.png" />
                 </div>
-                Invalid customer placeholders are shown when editing email content:
+                Invalid customer placeholders are shown when editing email
+                content:
                 <div class="mt-4">
                   <img src="../assets/debriefs/25/scr9.png" />
                 </div>
