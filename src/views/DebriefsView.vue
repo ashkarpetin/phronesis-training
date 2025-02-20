@@ -8,6 +8,59 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse27"
+          aria-expanded="true"
+          aria-controls="collapse27"
+        >
+          Project 27: Notify customers about trial ending
+        </button>
+      </h2>
+      <div
+        id="collapse27"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Egor, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>
+              It took us around 1 hour to complete the training.
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                Reminder emails which were sent are not shown in customer timeline.
+              </li>
+              <li class="mb-2">
+                Reminders are processed every 30 minutes. Docs don't mention that, and it is hard to test reminders without that knowledge.
+              </li>
+              <li class="mb-2">
+                Clicking cancel button on "Change trial end date" modal, reload upcoming invoice and order details. Seems like a bad UX, nothing change, no need to reload.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/27/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                There is no way to know when reminder was sent. API does not return any fields containing this information.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse26"
           aria-expanded="true"
           aria-controls="collapse26"
@@ -17,7 +70,7 @@
       </h2>
       <div
         id="collapse26"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -54,8 +107,8 @@
               <li class="mb-2">
                 It would be nice to be able to specify the sheet name to send
                 the data. Right now data is sent to the first list by default
-                which might not be good as sheet order might be changed by somebody, and the
-                data will be sent to the wrong sheet.
+                which might not be good as sheet order might be changed by
+                somebody, and the data will be sent to the wrong sheet.
               </li>
             </ul>
           </div>
