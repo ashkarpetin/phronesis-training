@@ -12,12 +12,98 @@
           aria-expanded="true"
           aria-controls="collapse27"
         >
-          Project 27: Notify customers about trial ending
+          Project 28: Subscription reactivations
         </button>
       </h2>
       <div
         id="collapse27"
         class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Egor, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>
+              We used reactivation quotes to reactivate subscriptions. It took us around 1 hour to complete the training, didn't find any major issues. 
+              We were able to test webhooks using https://requestcatcher.com/ service which did not require any authentication.
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                Subscription renewal time got modifed to +1 second. Not sure why.
+                The message "Subscription renewal time modified" is confusing in timeline when time format is 12h, because it looks like renewal time didn't change.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/28/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Datetime values in the timelines tables do not adhere to the profile's time format.
+                On the screen it is clearly shown that timeline creation time is in 24h format according to profile settings, but in the table it is shown in 12h format.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/28/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                "Reactivate" badge looks confusing because it's a verb though title shows "Reactivation quote".
+                <div class="mt-4">
+                  <img src="../assets/debriefs/28/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Capitalization issues.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/28/scr3.png" />
+                </div>
+                "Quote for Customer" message seems excessive as all quotes are created for customers.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/28/scr4.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Might be useful to be able to choose multiple webhook events from single search result.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/28/scr5.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                We were unable to get the subscription upgraded/downgraded events in timeline and webhooks when reactivating order with quote and removing or adding plan items.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/28/scr6.png" />
+                </div>
+
+                But when we edited item on active subscription then upgraded/downgraded events recorded properly, webhooks sent.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/28/scr7.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapse27"
+          aria-expanded="true"
+          aria-controls="collapse27"
+        >
+          Project 27: Notify customers about trial ending
+        </button>
+      </h2>
+      <div
+        id="collapse27"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -54,7 +140,6 @@
         </div>
       </div>
     </div>
-
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button
