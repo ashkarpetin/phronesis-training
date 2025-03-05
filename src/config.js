@@ -1,6 +1,6 @@
 export const APP_CONFIG = {
-  apiKey: 'sk_sandbox_BN0BBb2pedfPxrRzHw0Vd1kvowzMgSpwdBx3g9C',
-  organizationId: 'phronesis-test-1',
+  apiKey: 'sk_sandbox_WDFcZ74gWCrXQQCNaPaHMqmhNBZVld15XupuSni',
+  organizationId: 'phronesis-alex-arman',
   websiteId: 'test.com',
   customerId: 'test',
 };
