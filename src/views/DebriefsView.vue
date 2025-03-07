@@ -33,9 +33,10 @@
             <strong>What did you find confusing?</strong>
             <ul>
               <li class="mb-2">
-                When you enter invalid amount, the validaiton error shown for
-                all methods except Google Pay one and allows to choose it and to
-                pay with previous valid amount.
+                When you enter invalid amount (for example, $15,000), the
+                validation error is shown for all methods except Google Pay one.
+                Clicking on Google Pay button shows a modal with some different
+                valid amount ($1,500), and allows to pay for it.
                 <div class="mt-4">
                   <img src="../assets/debriefs/29/scr1.png" />
                 </div>
@@ -61,10 +62,9 @@
               <li class="mb-2">
                 If you check "Set base amount to match customer’s last deposit",
                 and define custom amounts with maximum of $10000. Then make a
-                payment with $10000, the next deposit form shows amounts
-                $10000, $10005, $10020, $10045, $10045. But custom amounts are
-                still limited to $10000. Not sure if this a bug or expected
-                behavior.
+                payment with $10000, the next deposit form shows amounts $10000,
+                $10005, $10020, $10045, $10045. But custom amounts are still
+                limited to $10000. Not sure if this a bug or expected behavior.
                 <div class="mt-4">
                   <img src="../assets/debriefs/29/scr3.png" />
                 </div>
