@@ -3,8 +3,9 @@
   --r-secondary: var(--bs-secondary);
   --r-button-text-color: var(--bs-white);
   --r-font-family: 'Inter', sans-serif;
-  --r-border-radius: 0;
-  --r-border-color: #afe1af;
+  --r-border-radius: 5px;
+  --r-border-color: #0d6efd;
+  --r-button-primary-background-hover: #0a58ca;
 }
 
 * {

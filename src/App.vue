@@ -41,7 +41,7 @@ import { RouterLink, RouterView } from 'vue-router';
 
   <footer class="bg-light text-dark text-center py-3 mt-auto">
     <div class="container">
-      <p class="mb-0">&copy; 2024</p>
+      <p class="mb-0">&copy; 2025</p>
     </div>
   </footer>
 </template>
