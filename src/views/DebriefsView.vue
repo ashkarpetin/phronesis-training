@@ -35,15 +35,42 @@
               <li class="mb-2">
                 When you enter invalid amount, the validaiton error shown for
                 all methods except Google Pay one and allows to choose it and to
-                pay last valid amount.
+                pay with previous valid amount.
                 <div class="mt-4">
                   <img src="../assets/debriefs/29/scr1.png" />
                 </div>
               </li>
               <li class="mb-2">
-                There is no way to update billing address of the saved payment
-                card because there is not inputs, the only way is to add new
-                card.
+                There is no way to update billing address for the saved payment
+                card, the only way is to add a new card with same PAN.
+              </li>
+              <li class="mb-2">
+                Google Pay button refreshes every time the deposit amount
+                changed. Not great UX, not sure if it is feature or bug.
+              </li>
+              <li class="mb-2">
+                Deposit configuration form in Recomm for absolute calculator
+                with increments is still confusing. First time we configured it
+                incorrectly. To display amounts of $5, $10, $25, $50 and $100 we
+                need to set base amount to $5 and increments to $5, $20, $45,
+                $95 which is not obvious, and not great UX.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/29/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                If you check "Set base amount to match customer’s last deposit",
+                and define custom amounts with maximum of $10000. Then make a
+                payment with $10000, the next deposit form shows amounts
+                $10000, $10005, $10020, $10045, $10045. But custom amounts are
+                still limited to $10000. Not sure if this a bug or expected
+                behavior.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/29/scr3.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/29/scr4.png" />
+                </div>
               </li>
             </ul>
           </div>
