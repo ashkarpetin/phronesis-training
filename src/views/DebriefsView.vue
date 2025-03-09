@@ -60,16 +60,19 @@
                 </div>
               </li>
               <li class="mb-2">
-                If you check "Set base amount to match customer’s last deposit",
-                and define custom amounts with maximum of $10000. Then make a
-                payment with $10000, the next deposit form shows amounts $10000,
-                $10005, $10020, $10045, $10045. But custom amounts are still
-                limited to $10000. Not sure if this a bug or expected behavior.
+                Confusing validation message "Please enter a multiple of 1".
                 <div class="mt-4">
                   <img src="../assets/debriefs/29/scr3.png" />
                 </div>
+              </li>
+              <li class="mb-2">
+                If customer amounts limits are different from base amount and increments, I can select an amount $10095 but cannot enter $10095 as a custom amount.
+                Strange UX, not sure if this bug or feature.
                 <div class="mt-4">
                   <img src="../assets/debriefs/29/scr4.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/29/scr5.png" />
                 </div>
               </li>
             </ul>
