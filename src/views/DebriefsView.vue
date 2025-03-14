@@ -8,6 +8,148 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse30"
+          aria-expanded="true"
+          aria-controls="collapse30"
+        >
+          Project 30: Collect KYC documents
+        </button>
+      </h2>
+      <div
+        id="collapse30"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arman, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>
+              Team work, simple rules engine configuration, we tried gatherer UI
+              versions 1 and 2.
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Inconstistency between API definitions and Recomm, in API defs
+                "Match level" 2/moderate, in Recomm "Document verification
+                level" relaxed/moderate.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/30/scr1.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/30/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                "Request KYC" action configured for "Gateway account requested"
+                event. TestProcessor with enabled sticky gateways is preventing
+                "Gateway account requested" event dispatching, so transaction
+                was immediately approved, no KYC documents were requested. We
+                probably can add action to "Transaction process requested"
+                event.
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                After adding a new card, an address remained displayed on the
+                screen. Seems issue with input z-index.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/30/scr3.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/30/scr4.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                "Issue the KYC request: After processing the transaction" does
+                not work because it is not implemented on backend. Maybe we
+                should remove this option from the rule engine, does not seem
+                there is case when KYC document are requested after transaction
+                is processed.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/30/scr5.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                All buttons are hidden if image is too big, unable to proceed
+                further (UI version 2, desktop Chrome browser).
+                <div class="mt-4">
+                  <img src="../assets/debriefs/30/scr6.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Configuring action as "address-proof" only (and probably other
+                non-identity types too) + selfie breaks the gatherer for both UI
+                versions. You upload image but cannot proceed further, because
+                StorefrontPostKycDocument API operation returns a validation
+                error "Invalid number of files" (it expects 2 files, because of
+                selfie), but the gatherer shows confusing error "Maximmum upload
+                attempts reached".
+                <div class="mt-4">
+                  <img src="../assets/debriefs/30/scr9.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/30/scr7.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/30/scr8.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Configured action as "identity-proof" with subtypes (for example
+                "id-card", "passport", or "driver-license") breaks the gatherer
+                flow. You cannot proceed further to transaction processing after
+                uploading the image, notification is shown "Your request is
+                still processing, please try again later", API returns 422 "KYC
+                request is not fulfilled.", because KYC request expects subtype
+                on KYC document filled while KYC document is accepted.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/30/scr10.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/30/scr11.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/30/scr12.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Not able to get selfie in Chrome desktop browser, got "Camera is
+                not authorized" error. Chrome configured to ask camera
+                permissions by default, but no permissions were requested.
+                Didn't work even after explicitly allowing camera for the
+                website. Not clear how to enable those permissions, maybe add
+                instructions for different browsers. In browser console there is
+                an error "Permissions policy violation: camera is not allowed in
+                this document"
+                <div class="mt-4">
+                  <img src="../assets/debriefs/30/scr13.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse29"
           aria-expanded="true"
           aria-controls="collapse29"
@@ -17,7 +159,7 @@
       </h2>
       <div
         id="collapse29"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -66,8 +208,10 @@
                 </div>
               </li>
               <li class="mb-2">
-                If customer amounts limits are different from base amount and increments, I can select an amount $10095 but cannot enter $10095 as a custom amount.
-                Strange UX, not sure if this bug or feature.
+                If customer amounts limits are different from base amount and
+                increments, I can select an amount $10095 but cannot enter
+                $10095 as a custom amount. Strange UX, not sure if this bug or
+                feature.
                 <div class="mt-4">
                   <img src="../assets/debriefs/29/scr4.png" />
                 </div>
@@ -80,6 +224,7 @@
         </div>
       </div>
     </div>
+
     <div class="accordion-item">
       <h2 class="accordion-header">
         <button
@@ -172,62 +317,6 @@
                 <div class="mt-4">
                   <img src="../assets/debriefs/28/scr7.png" />
                 </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse27"
-          aria-expanded="true"
-          aria-controls="collapse27"
-        >
-          Project 27: Notify customers about trial ending
-        </button>
-      </h2>
-      <div
-        id="collapse27"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Egor, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>It took us around 1 hour to complete the training.</p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                Reminder emails which were sent are not shown in customer
-                timeline.
-              </li>
-              <li class="mb-2">
-                Reminders are processed every 30 minutes. Docs don't mention
-                that, and it is hard to test reminders without that knowledge.
-              </li>
-              <li class="mb-2">
-                Clicking cancel button on "Change trial end date" modal, reload
-                upcoming invoice and order details. Seems like a bad UX, nothing
-                change, no need to reload.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/27/scr1.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                There is no way to know when reminder was sent. API does not
-                return any fields containing this information.
               </li>
             </ul>
           </div>
