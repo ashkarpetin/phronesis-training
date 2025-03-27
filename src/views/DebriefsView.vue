@@ -12,12 +12,107 @@
           aria-expanded="true"
           aria-controls="collapse31"
         >
-          Project 31: Orders Early Access
+          Project 32: Support team
         </button>
       </h2>
       <div
         id="collapse31"
         class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arman, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Unable to edit role name (input is disabled), although API
+                allows it.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/32/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Permissions management UX is not great. You need to either
+                manually copy permissions from
+                <a
+                  href="https://www.rebilly.com/docs/settings/user-permissions"
+                  target="_blank"
+                  >Rebilly docs</a
+                >. We probably can improve the UX by adding UI where user can
+                filter/add permissions by resource (for example customers,
+                transactions) and by operation type (read: GET*; write: Post*,
+                Put*, Patch*; delete: Delete*) instead of copy-paste from a
+                Rebilly docs page.
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Recomm does not remove extra whitespace and empty rows from
+                permission input, so it often leads to validation errors on
+                save, and it is not clear what is wrong.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/32/scr2.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/32/scr3.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                We were not clear about the task to allow customer to edit
+                payment instrument by link. So we used billing portals. Billing
+                portal link was showing in menu on customer although user didn't
+                have any billing portal permissions. After clicking on the link
+                a modal appeared with text that we have no billing portals
+                (although we have one), and error showed "Unable to fetch
+                billing portals".
+                <div class="mt-4">
+                  <img src="../assets/debriefs/32/scr4.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/32/scr5.png" />
+                </div>
+
+                After we added billing portal permissions
+                GetBillingPortalCollection and GetBillingPortal we still were
+                unable to generate link because of missing
+                PostAuthenticationToken permission. After adding missing
+                permission we were able to generate link.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/32/scr6.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapse31"
+          aria-expanded="true"
+          aria-controls="collapse31"
+        >
+          Project 31: Orders Early Access
+        </button>
+      </h2>
+      <div
+        id="collapse31"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -72,16 +167,16 @@
               </li>
               <li class="mb-2">
                 <p><span class="badge bg-danger">Bug</span></p>
-                1. On order details page you can pause the order, but there is no
-                button to unpause it.
+                1. On order details page you can pause the order, but there is
+                no button to unpause it.
                 <div class="mt-4">
                   <img src="../assets/debriefs/31/scr2.png" />
                 </div>
                 <div class="mt-4">
                   <img src="../assets/debriefs/31/scr3.png" />
                 </div>
-                2.On order items details page a button "Pause order" displayed for
-                paused order.
+                2.On order items details page a button "Pause order" displayed
+                for paused order.
                 <div class="mt-4">
                   <img src="../assets/debriefs/31/scr4.png" />
                 </div>
@@ -156,7 +251,8 @@
                 <div class="mt-4">
                   <img src="../assets/debriefs/31/scr13.png" />
                 </div>
-                4. "Cancel order" and "Update renewal" buttons are shown for churned order on order details page.
+                4. "Cancel order" and "Update renewal" buttons are shown for
+                churned order on order details page.
                 <div class="mt-4">
                   <img src="../assets/debriefs/31/scr14.png" />
                 </div>
