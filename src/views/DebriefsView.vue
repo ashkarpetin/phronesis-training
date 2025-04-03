@@ -12,12 +12,118 @@
           aria-expanded="true"
           aria-controls="collapse31"
         >
-          Project 32: Support team
+          Project 33: Coupons
         </button>
       </h2>
       <div
         id="collapse31"
         class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arman, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Unable to create coupon with "Restrict to countries"
+                restriction, getting validation error "Restrictions > 0 >
+                Country IDs: This value should not be blank."
+                <div class="mt-4">
+                  <img src="../assets/debriefs/33/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                No error message is shown if coupon redemption failed on a
+                customer page while API returns 422 "Cannot redeem the coupon,
+                disallowed by restrictions". To reproduce: create a redeemable
+                once per customer coupon, try to apply coupon to a customer 2
+                times.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/33/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Coupon code and description are displayed on invoice pdf, but
+                not displayed on invoice details page except timeline.
+                <div class="mt-4">
+                  Recomm:
+                  <img src="../assets/debriefs/33/scr3.png" />
+                </div>
+                <div class="mt-4">
+                  PDF file:
+                  <img src="../assets/debriefs/33/scr4.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Missing sort by redemption time when creating segment with type
+                "Coupon redemptions".
+                <div class="mt-4">
+                  <img src="../assets/debriefs/33/scr5.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Restrictions column shows [object Object] in coupons data
+                tables.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/33/scr6.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Unable to change order of coupon ID and ID columns on coupons
+                redemptions data table, both elements are disabled.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/33/scr7.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Segment defined columns order is not consistent with the actual
+                column order in data table.
+                <div class="mt-4">
+                  Segment creation page:
+                  <img src="../assets/debriefs/33/scr8.png" />
+                </div>
+                <div class="mt-4">
+                  Data table:
+                  <img src="../assets/debriefs/33/scr9.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapse31"
+          aria-expanded="true"
+          aria-controls="collapse31"
+        >
+          Project 32: Support team
+        </button>
+      </h2>
+      <div
+        id="collapse31"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -397,186 +503,6 @@
                 this document"
                 <div class="mt-4">
                   <img src="../assets/debriefs/30/scr13.png" />
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse29"
-          aria-expanded="true"
-          aria-controls="collapse29"
-        >
-          Project 29: Deposits again
-        </button>
-      </h2>
-      <div
-        id="collapse29"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>Team work, simple configuration, easy to implement.</p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                When you enter invalid amount (for example, $15,000), the
-                validation error is shown for all methods except Google Pay one.
-                Clicking on Google Pay button shows a modal with some different
-                valid amount ($1,500), and allows to pay for it.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/29/scr1.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                There is no way to update billing address for the saved payment
-                card, the only way is to add a new card with same PAN.
-              </li>
-              <li class="mb-2">
-                Google Pay button refreshes every time the deposit amount
-                changed. Not great UX, not sure if it is feature or bug.
-              </li>
-              <li class="mb-2">
-                Deposit configuration form in Recomm for absolute calculator
-                with increments is still confusing. First time we configured it
-                incorrectly. To display amounts of $5, $10, $25, $50 and $100 we
-                need to set base amount to $5 and increments to $5, $20, $45,
-                $95 which is not obvious, and not great UX.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/29/scr2.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                Confusing validation message "Please enter a multiple of 1".
-                <div class="mt-4">
-                  <img src="../assets/debriefs/29/scr3.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                If customer amounts limits are different from base amount and
-                increments, I can select an amount $10095 but cannot enter
-                $10095 as a custom amount. Strange UX, not sure if this bug or
-                feature.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/29/scr4.png" />
-                </div>
-                <div class="mt-4">
-                  <img src="../assets/debriefs/29/scr5.png" />
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse27"
-          aria-expanded="true"
-          aria-controls="collapse27"
-        >
-          Project 28: Subscription reactivations
-        </button>
-      </h2>
-      <div
-        id="collapse27"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Egor, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>
-              We used reactivation quotes to reactivate subscriptions. It took
-              us around 1 hour to complete the training, didn't find any major
-              issues. We were able to test webhooks using
-              https://requestcatcher.com/ service which did not require any
-              authentication.
-            </p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                Subscription renewal time got modifed to +1 second. Not sure
-                why. The message "Subscription renewal time modified" is
-                confusing in timeline when time format is 12h, because it looks
-                like renewal time didn't change.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/28/scr1.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                Datetime values in the timelines tables do not adhere to the
-                profile's time format. On the screen it is clearly shown that
-                timeline creation time is in 24h format according to profile
-                settings, but in the table it is shown in 12h format.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/28/scr1.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                "Reactivate" badge looks confusing because it's a verb though
-                title shows "Reactivation quote".
-                <div class="mt-4">
-                  <img src="../assets/debriefs/28/scr2.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                Capitalization issues.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/28/scr3.png" />
-                </div>
-                "Quote for Customer" message seems excessive as all quotes are
-                created for customers.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/28/scr4.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                Might be useful to be able to choose multiple webhook events
-                from single search result.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/28/scr5.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                We were unable to get the subscription upgraded/downgraded
-                events in timeline and webhooks when reactivating order with
-                quote and removing or adding plan items.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/28/scr6.png" />
-                </div>
-
-                But when we edited item on active subscription then
-                upgraded/downgraded events recorded properly, webhooks sent.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/28/scr7.png" />
                 </div>
               </li>
             </ul>
