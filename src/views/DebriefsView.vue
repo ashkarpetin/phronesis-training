@@ -8,6 +8,87 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse35"
+          aria-expanded="true"
+          aria-controls="collapse35"
+        >
+          Project 35: Shipping rates
+        </button>
+      </h2>
+      <div
+        id="collapse35"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arman, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work, it was a pretty short training session.</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Some shipping rates filters are not working, resulting in 422
+                errors or wrong shipping rate picked when creating a
+                subscription with shippable product and shipping rate calculator
+                "Rebilly".
+                <a
+                  href="https://github.com/Rebilly/rebilly/issues/11308"
+                  target="_blank"
+                  >Github issue</a
+                >
+                <div class="mt-4">
+                  <img src="../assets/debriefs/35/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                Default shipping type is "Manual" with amount $0 on order
+                creation in Recomm even if you have shipping rates configured.
+                Not sure if it is intentional.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/35/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Getting 422 when trying change invoice shipping from "Rebilly"
+                to "Manual". Probably because Recomm sends this shipping payload
+                `{calculator: "manual", amount: 1, rateId: "vip-free"}`, which
+                included both amount and rateId. One of those values should be
+                omitted, or backend might ignore one of them.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/35/scr3.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/35/scr4.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Unable to change invoice shipping from "Manual" to "Rebilly",
+                save button disabled.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/35/scr5.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse34"
           aria-expanded="true"
           aria-controls="collapse34"
@@ -17,7 +98,7 @@
       </h2>
       <div
         id="collapse34"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -245,172 +326,6 @@
                 permission we were able to generate link.
                 <div class="mt-4">
                   <img src="../assets/debriefs/32/scr6.png" />
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse31"
-          aria-expanded="true"
-          aria-controls="collapse31"
-        >
-          Project 31: Orders Early Access
-        </button>
-      </h2>
-      <div
-        id="collapse31"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>Team work</p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Overall the UI feels unpolished and the UX is not great. A lot
-                of free space on the page:
-                <ul>
-                  <li>Status badge color is not consistent (1)</li>
-                  <li>
-                    Labels "view" and "Qty": inconsistent capitalization, and
-                    inappropiate abbreviation (2)
-                  </li>
-                  <li>
-                    The panel takes up a lot of space, and seems redundant (3)
-                  </li>
-                  <li>
-                    "Create reactivation quote" button is displayed of active
-                    order (4)
-                  </li>
-                  <li>
-                    "Order details" panel is duplicated, "Edit button" is
-                    duplicated (5)
-                  </li>
-                  <li>
-                    Invalid capitalization "Upcoming invoice for this
-                    Order"/"Invoices for this Order"
-                  </li>
-                </ul>
-                <div class="mt-4">
-                  <img src="../assets/debriefs/31/scr1.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Order items details page seems redundant, because it duplicates
-                information from order details page.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/31/scr5.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                1. On order details page you can pause the order, but there is
-                no button to unpause it.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/31/scr2.png" />
-                </div>
-                <div class="mt-4">
-                  <img src="../assets/debriefs/31/scr3.png" />
-                </div>
-                2.On order items details page a button "Pause order" displayed
-                for paused order.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/31/scr4.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                There is no data tables for new orders, which is very
-                inconvenient.
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Error is shown when you try to early pay the upcoming invoice.
-                Seems Recomm bug as no API requests are made.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/31/scr6.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Missing created time and updated time on order item when editing
-                order.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/31/scr10.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Unable to update usages of a metered billing plan order item,
-                got error "Invoice not found" when clicking on "Update usages"
-                button on upcoming invoice.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/31/scr7.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                "Draft" badge does not make sense for upcoming invoice.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/31/scr8.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                After editing order item getting redirected to initial invoice.
-                We would expect to be redirected to the order details page or to
-                the upcoming invoice.
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Metered billing can be enabled for a plan only if post paid
-                billing timing is selected above, which might be confusing. Also
-                text "can also be prepaid when a customer purchases an allowance
-                of some quantity and then depletes the allowance" is incorrect,
-                metered billing can be post paid only in our case.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/31/scr9.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                1. "Cancel at next renewal" is missing actual renewal time.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/31/scr11.png" />
-                </div>
-                2. "Upcoming invoice not found" error is display every time you
-                open a canceled order.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/31/scr12.png" />
-                </div>
-                3. Error and empty modal is shown after clicling on "Update
-                cancellation time" button.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/31/scr13.png" />
-                </div>
-                4. "Cancel order" and "Update renewal" buttons are shown for
-                churned order on order details page.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/31/scr14.png" />
                 </div>
               </li>
             </ul>
