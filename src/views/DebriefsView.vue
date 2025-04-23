@@ -8,6 +8,68 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse36"
+          aria-expanded="true"
+          aria-controls="collapse36"
+        >
+          Project 36: Custom domains
+        </button>
+      </h2>
+      <div
+        id="collapse36"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arman, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work, we configured custom domain without any issues.</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                URL displayed in payment form URL modal in Recomm still contains
+                "secure-payments.app" domain instead of configured custom
+                domain.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/36/scr1.png" />
+                </div>
+
+                <div class="mt-4">
+                  <div>
+                    Same issue with "Generate request payout link" modal.
+                  </div>
+                  <img src="../assets/debriefs/36/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                After payment completion, payment form redirects from custom
+                domain to "forms-sandbox.secure-payments.app" domain, which
+                further redirects to orignal redirecs URL. Seems it should
+                redirect to custom domain instead.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/36/scr3.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse35"
           aria-expanded="true"
           aria-controls="collapse35"
@@ -17,7 +79,7 @@
       </h2>
       <div
         id="collapse35"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -231,101 +293,6 @@
                 <div class="mt-4">
                   Data table:
                   <img src="../assets/debriefs/33/scr9.png" />
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse32"
-          aria-expanded="true"
-          aria-controls="collapse32"
-        >
-          Project 32: Support team
-        </button>
-      </h2>
-      <div
-        id="collapse32"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>Team work</p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Unable to edit role name (input is disabled), although API
-                allows it.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/32/scr1.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Permissions management UX is not great. You need to either
-                manually copy permissions from
-                <a
-                  href="https://www.rebilly.com/docs/settings/user-permissions"
-                  target="_blank"
-                  >Rebilly docs</a
-                >. We probably can improve the UX by adding UI where user can
-                filter/add permissions by resource (for example customers,
-                transactions) and by operation type (read: GET*; write: Post*,
-                Put*, Patch*; delete: Delete*) instead of copy-paste from a
-                Rebilly docs page.
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Recomm does not remove extra whitespace and empty rows from
-                permission input, so it often leads to validation errors on
-                save, and it is not clear what is wrong.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/32/scr2.png" />
-                </div>
-                <div class="mt-4">
-                  <img src="../assets/debriefs/32/scr3.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                We were not clear about the task to allow customer to edit
-                payment instrument by link. So we used billing portals. Billing
-                portal link was showing in menu on customer although user didn't
-                have any billing portal permissions. After clicking on the link
-                a modal appeared with text that we have no billing portals
-                (although we have one), and error showed "Unable to fetch
-                billing portals".
-                <div class="mt-4">
-                  <img src="../assets/debriefs/32/scr4.png" />
-                </div>
-                <div class="mt-4">
-                  <img src="../assets/debriefs/32/scr5.png" />
-                </div>
-
-                After we added billing portal permissions
-                GetBillingPortalCollection and GetBillingPortal we still were
-                unable to generate link because of missing
-                PostAuthenticationToken permission. After adding missing
-                permission we were able to generate link.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/32/scr6.png" />
                 </div>
               </li>
             </ul>
