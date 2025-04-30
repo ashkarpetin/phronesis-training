@@ -12,12 +12,116 @@
           aria-expanded="true"
           aria-controls="collapse36"
         >
-          Project 36: Custom domains
+          Project 37: Quickbooks integration
         </button>
       </h2>
       <div
         id="collapse36"
         class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arman, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>
+              Not much, we were not able to complete the training due to various
+              issues.
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                We've disconnected from Quickbooks and then reconnected again
+                with other QB account but Recomm still shows previous inactive
+                credential, and this is misleading.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/37/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Sync button does not have any visual feedback, and it is not
+                clear if you clicked on it or not.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/37/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Seems
+                <a
+                  href="https://app-sandbox.rebilly.com/phronesis-alex-arman/customers/qb-test-4"
+                  target="_blank"
+                  >customer</a
+                >
+                email and phone are not synced with Quickbooks.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/37/scr4.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                We updated
+                <a
+                  href="https://app-sandbox.rebilly.com/phronesis-alex-arman/customers/qb-test-4"
+                  target="_blank"
+                  >customer</a
+                >
+                details including first name, last name, billing address
+                country, phone, emails and it was not reflected in QuickBooks
+                even after manual sync.
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                We were not able to synchronize invoices, an error recorded in
+                timeline "Failed to communicate with QuickBooks due to failed to
+                get item id for invoice item ii_01JT33YM6Y05F4EXMRYGA6G1M2".
+                <div class="mt-4">
+                  <img src="../assets/debriefs/37/scr3.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                We were not able to synchronize transactions, nothing is
+                recorded in timeline. If try to synchronize manually and check
+                <a
+                  href="https://app-sandbox.rebilly.com/phronesis-alex-arman/data-tables/read-only-api-logs?filter=id:554f9f9f-d9a7-44d0-9122-1f944dd18d3b,97f69589-037b-4d81-9407-e154511db109"
+                  target="_blank"
+                  >API logs</a
+                >: First request "POST
+                https://api-sandbox.rebilly.com/transactions/txn_01JT33Z6NA2314SXADZ3HVHX9H/external-identifiers/quickbooks-online"
+                returns 204, but second request "GET
+                https://api-sandbox.rebilly.com/transactions/txn_01JT33Z6NA2314SXADZ3HVHX9H/external-identifiers/quickbooks-online"
+                returns 404.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapse36"
+          aria-expanded="true"
+          aria-controls="collapse36"
+        >
+          Project 36: Custom domains
+        </button>
+      </h2>
+      <div
+        id="collapse36"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -187,112 +291,6 @@
                 </div>
                 <div class="mt-4">
                   <img src="../assets/debriefs/34/scr2.png" />
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse33"
-          aria-expanded="true"
-          aria-controls="collapse33"
-        >
-          Project 33: Coupons
-        </button>
-      </h2>
-      <div
-        id="collapse33"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>Team work</p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Unable to create coupon with "Restrict to countries"
-                restriction, getting validation error "Restrictions > 0 >
-                Country IDs: This value should not be blank."
-                <div class="mt-4">
-                  <img src="../assets/debriefs/33/scr1.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                No error message is shown if coupon redemption failed on a
-                customer page while API returns 422 "Cannot redeem the coupon,
-                disallowed by restrictions". To reproduce: create a redeemable
-                once per customer coupon, try to apply coupon to a customer 2
-                times.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/33/scr2.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Coupon code and description are displayed on invoice pdf, but
-                not displayed on invoice details page except timeline.
-                <div class="mt-4">
-                  Recomm:
-                  <img src="../assets/debriefs/33/scr3.png" />
-                </div>
-                <div class="mt-4">
-                  PDF file:
-                  <img src="../assets/debriefs/33/scr4.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Missing sort by redemption time when creating segment with type
-                "Coupon redemptions".
-                <div class="mt-4">
-                  <img src="../assets/debriefs/33/scr5.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Restrictions column shows [object Object] in coupons data
-                tables.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/33/scr6.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Unable to change order of coupon ID and ID columns on coupons
-                redemptions data table, both elements are disabled.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/33/scr7.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Segment defined columns order is not consistent with the actual
-                column order in data table.
-                <div class="mt-4">
-                  Segment creation page:
-                  <img src="../assets/debriefs/33/scr8.png" />
-                </div>
-                <div class="mt-4">
-                  Data table:
-                  <img src="../assets/debriefs/33/scr9.png" />
                 </div>
               </li>
             </ul>
