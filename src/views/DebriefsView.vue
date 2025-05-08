@@ -8,16 +8,111 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#collapse36"
+          data-bs-target="#collapse38"
           aria-expanded="true"
-          aria-controls="collapse36"
+          aria-controls="collapse38"
         >
           Project 37: Quickbooks integration
         </button>
       </h2>
       <div
-        id="collapse36"
+        id="collapse38"
         class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arman, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>
+              Team work, we connected PayPal and made initial invoice payments,
+              and early issued renewal invoice was autopaid.
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                <a
+                  href="https://www.rebilly.com/docs/settings/add-paypal-account#1.-locate-your-sandbox-log-in-credentials"
+                  target="_blank"
+                  >Docs</a
+                >
+                about how to connect PayPal to Rebilly sandbox are not clear and
+                confusing. At first we tried login email/password of the
+                developer PayPal account, it onboarded successfully but we were
+                not able to make payments because payment agreement token was
+                missing then we figured out that we need to use email/password
+                found on PayPal "Sandbox accounts" page.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/38/scr1.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/38/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                It is not clear how to test sandbox PayPal payments. Docs don't
+                mention that information but you need to use creds from PayPal
+                "Sandbox accounts" page as before.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/38/scr3.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                After PayPal was successfully onboarded the user got redirected
+                to gateway account data tables instead of particular gateway
+                which was connected. Is it a bug or intentional?
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                After we made payment via hosted payment form which was
+                initiated on customer page "Collect payment" we immediately got
+                redirected and there was no confirmation that payment was
+                successful or not successful. When we tried instruments then we
+                got that confirmation.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/38/scr4.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                PayPal instruments are duplicating after each payment.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/38/scr5.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/38/scr6.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapse37"
+          aria-expanded="true"
+          aria-controls="collapse37"
+        >
+          Project 37: Quickbooks integration
+        </button>
+      </h2>
+      <div
+        id="collapse37"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -241,56 +336,6 @@
                 save button disabled.
                 <div class="mt-4">
                   <img src="../assets/debriefs/35/scr5.png" />
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse34"
-          aria-expanded="true"
-          aria-controls="collapse34"
-        >
-          Project 34: AML
-        </button>
-      </h2>
-      <div
-        id="collapse34"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>Team work, it was a pretty short training session.</p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Seems "PostAmlCheckReview" API endpoint has an undocumented
-                behavior. We were not able to confirm matches and receiving
-                404/422 API errors until we created 3 customer tags:
-                aml-match-possible, aml-match-false-positive,
-                aml-match-confirmed.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/34/scr1.png" />
-                </div>
-                <div class="mt-4">
-                  <img src="../assets/debriefs/34/scr2.png" />
                 </div>
               </li>
             </ul>
