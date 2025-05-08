@@ -12,7 +12,7 @@
           aria-expanded="true"
           aria-controls="collapse38"
         >
-          Project 37: Quickbooks integration
+          Project 38: PayPal
         </button>
       </h2>
       <div
