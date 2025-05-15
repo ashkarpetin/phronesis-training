@@ -80,7 +80,7 @@
                 <p><span class="badge bg-danger">Bug</span></p>
                 After customer accepted and paid quote, the order autopay has
                 been disabled. Quote page does not indicated that.
-                <div class="mt-4"><p></p>
+                <div class="mt-4">
                   <img src="../assets/debriefs/39/scr6.png" />
                 </div>
                 <div class="mt-4">
