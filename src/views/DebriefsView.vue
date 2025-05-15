@@ -8,6 +8,113 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse39"
+          aria-expanded="true"
+          aria-controls="collapse39"
+        >
+          Project 39: Change orders
+        </button>
+      </h2>
+      <div
+        id="collapse39"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arman, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work, we</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                "Edit items" button is hard to find on the page. We forgot how
+                to create a change quoted and it took us some time to figure out
+                how to create it. Maybe place the button to a more visible place
+                to the right button section?
+                <div class="mt-4">
+                  <img src="../assets/debriefs/39/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                It is not obvious that "Save" and "Create a quote" buttons
+                produce different results. There probably should be a checkbox
+                to select edit items via quote or directly and single button
+                "Save".
+                <div class="mt-4">
+                  <img src="../assets/debriefs/39/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                We've replaced one item with another but timeline shows like
+                there was 2 items (Item #1 and Item #2), not very obvious. Maybe
+                it is intentional? Or is it bug?
+                <div class="mt-4">
+                  <img src="../assets/debriefs/39/scr3.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Recomm shows "Subscription not found" error toast after creating
+                an order which confusing. This happens because of the order ETL
+                delay in sandbox, OS index is not updated yet, so GET call
+                "/experimental/subscriptions/ord_01JV9YH0PGSP30E8TNY5CPZGMV/summary-metrics"
+                returns 404. But this should be handled gracefully by Recomm,
+                and not result in such error.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/39/scr4.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/39/scr5.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                After customer accepted and paid quote, the order autopay has
+                been disabled. Quote page does not indicated that.
+                <div class="mt-4"><p></p>
+                  <img src="../assets/debriefs/39/scr6.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/39/scr7.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                We upgraded to expert training, then downgraded back to beginner
+                with effective time "now" and it produced strange result.
+                <div class="mt-4">
+                  <p>Payment page shows a negative amount with error</p>
+                  <img src="../assets/debriefs/39/scr8.png" />
+                </div>
+                <div class="mt-4">
+                  <p>
+                    Quotation interim invoice shows negative subtotal and $0
+                    amount due
+                  </p>
+                  <img src="../assets/debriefs/39/scr9.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse38"
           aria-expanded="true"
           aria-controls="collapse38"
@@ -17,7 +124,7 @@
       </h2>
       <div
         id="collapse38"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -255,87 +362,6 @@
                 redirect to custom domain instead.
                 <div class="mt-4">
                   <img src="../assets/debriefs/36/scr3.png" />
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse35"
-          aria-expanded="true"
-          aria-controls="collapse35"
-        >
-          Project 35: Shipping rates
-        </button>
-      </h2>
-      <div
-        id="collapse35"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>Team work, it was a pretty short training session.</p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Some shipping rates filters are not working, resulting in 422
-                errors or wrong shipping rate picked when creating a
-                subscription with shippable product and shipping rate calculator
-                "Rebilly".
-                <a
-                  href="https://github.com/Rebilly/rebilly/issues/11308"
-                  target="_blank"
-                  >Github issue</a
-                >
-                <div class="mt-4">
-                  <img src="../assets/debriefs/35/scr1.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                Default shipping type is "Manual" with amount $0 on order
-                creation in Recomm even if you have shipping rates configured.
-                Not sure if it is intentional.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/35/scr2.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Getting 422 when trying change invoice shipping from "Rebilly"
-                to "Manual". Probably because Recomm sends this shipping payload
-                `{calculator: "manual", amount: 1, rateId: "vip-free"}`, which
-                included both amount and rateId. One of those values should be
-                omitted, or backend might ignore one of them.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/35/scr3.png" />
-                </div>
-                <div class="mt-4">
-                  <img src="../assets/debriefs/35/scr4.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Unable to change invoice shipping from "Manual" to "Rebilly",
-                save button disabled.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/35/scr5.png" />
                 </div>
               </li>
             </ul>
