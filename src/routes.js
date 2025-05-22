@@ -5,6 +5,11 @@ export default [
     component: () => import('./views/HomeView.vue'),
   },
   {
+    path: '/checkout',
+    name: 'checkout',
+    component: () => import('./views/CheckoutView.vue'),
+  },
+  {
     path: '/casino',
     name: 'casino',
     component: () => import('./views/CasinoView.vue'),
