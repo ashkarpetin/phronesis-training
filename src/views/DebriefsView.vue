@@ -8,15 +8,15 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#collapse39"
+          data-bs-target="#collapse40"
           aria-expanded="true"
-          aria-controls="collapse39"
+          aria-controls="collapse40"
         >
-          Project 39: Change orders
+          Project 40: Lead source attribution
         </button>
       </h2>
       <div
-        id="collapse39"
+        id="collapse40"
         class="accordion-collapse collapse show"
         data-bs-parent="#debriefs"
       >
@@ -27,7 +27,88 @@
           </div>
           <div>
             <strong>What made you smile?</strong>
-            <p>Team work, we</p>
+            <p>
+              Team work, we were able to record lead source attributes via
+              hosted payment form and Instruments library by adding UTM fields
+              to the query string.
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Rebilly docs mention that FramePay supports lead source. But as
+                we tested and confirmed it is supported by Instruments library
+                and hosted payment form too. So it is not documented well in our
+                docs, and is confusing for users.
+                <p>
+                  <a
+                    href="https://www.rebilly.com/docs/tutorials/lead-source-attribution#integration"
+                    >https://www.rebilly.com/docs/tutorials/lead-source-attribution#integration</a
+                  >
+                </p>
+                <p>
+                  This page is located in the FramePay section of the docs so it
+                  hard to find which attributes are supported.
+                  <a href="https://www.rebilly.com/docs/dev-docs/lead-sources"
+                    >https://www.rebilly.com/docs/dev-docs/lead-sources</a
+                  >
+                </p>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Seems Cashier library and deposit form does not support lead
+                source attribution.
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Lead source attribute values are being truncated too severely,
+                resulting in very short entries in Recomm.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/40/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Data export URL in email may be adjusted to include organization
+                ID for multi-organization merchants.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/40/scr2.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapse39"
+          aria-expanded="true"
+          aria-controls="collapse39"
+        >
+          Project 39: Change orders
+        </button>
+      </h2>
+      <div
+        id="collapse39"
+        class="accordion-collapse collapse"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arman, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work</p>
           </div>
           <div>
             <strong>What did you find confusing?</strong>
@@ -301,68 +382,6 @@
                 returns 204, but second request "GET
                 https://api-sandbox.rebilly.com/transactions/txn_01JT33Z6NA2314SXADZ3HVHX9H/external-identifiers/quickbooks-online"
                 returns 404.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse36"
-          aria-expanded="true"
-          aria-controls="collapse36"
-        >
-          Project 36: Custom domains
-        </button>
-      </h2>
-      <div
-        id="collapse36"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>Team work, we configured custom domain without any issues.</p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                URL displayed in payment form URL modal in Recomm still contains
-                "secure-payments.app" domain instead of configured custom
-                domain.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/36/scr1.png" />
-                </div>
-
-                <div class="mt-4">
-                  <div>
-                    Same issue with "Generate request payout link" modal.
-                  </div>
-                  <img src="../assets/debriefs/36/scr2.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                After payment completion, payment form redirects from custom
-                domain to "forms-sandbox.secure-payments.app" domain, which
-                further redirects to orignal redirecs URL. Seems it should
-                redirect to custom domain instead.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/36/scr3.png" />
-                </div>
               </li>
             </ul>
           </div>
