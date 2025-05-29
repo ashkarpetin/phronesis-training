@@ -8,6 +8,69 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse41"
+          aria-expanded="true"
+          aria-controls="collapse41"
+        >
+          Project 41: Taxes
+        </button>
+      </h2>
+      <div
+        id="collapse41"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arman, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work, taxes worked, we did it pretty fast.</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Rebilly tax
+                <a href="https://www.rebilly.com/docs/settings/taxes">docs</a>
+                and Recomm are not clear enough about automatic tax calculation
+                and tax locations feature. Our organization country was not set
+                to US, and tax location was not displayed. Then we found another
+                another guide
+                <a
+                  href="https://www.rebilly.com/docs/settings/organizations-and-websites#manage-tax-locations"
+                  >here</a
+                >
+                which mentions "This feature is only available to US-based
+                organizations.", after chaning country to US, we were able to
+                configure tax locations.
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Broken links on the
+                <a href="https://www.rebilly.com/docs/settings/taxes">docs</a>
+                page:
+                <p>
+                  1. Has description "Manage the tax ID numbers of an
+                  organization" but leads to tax locations.
+                </p>
+                <p>2. Broken link anchor.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse40"
           aria-expanded="true"
           aria-controls="collapse40"
@@ -17,7 +80,7 @@
       </h2>
       <div
         id="collapse40"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -278,110 +341,6 @@
                 <div class="mt-4">
                   <img src="../assets/debriefs/38/scr6.png" />
                 </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse37"
-          aria-expanded="true"
-          aria-controls="collapse37"
-        >
-          Project 37: Quickbooks integration
-        </button>
-      </h2>
-      <div
-        id="collapse37"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>
-              Not much, we were not able to complete the training due to various
-              issues.
-            </p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                We've disconnected from Quickbooks and then reconnected again
-                with other QB account but Recomm still shows previous inactive
-                credential, and this is misleading.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/37/scr1.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Sync button does not have any visual feedback, and it is not
-                clear if you clicked on it or not.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/37/scr2.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Seems
-                <a
-                  href="https://app-sandbox.rebilly.com/phronesis-alex-arman/customers/qb-test-4"
-                  target="_blank"
-                  >customer</a
-                >
-                email and phone are not synced with Quickbooks.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/37/scr4.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                We updated
-                <a
-                  href="https://app-sandbox.rebilly.com/phronesis-alex-arman/customers/qb-test-4"
-                  target="_blank"
-                  >customer</a
-                >
-                details including first name, last name, billing address
-                country, phone, emails and it was not reflected in QuickBooks
-                even after manual sync.
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                We were not able to synchronize invoices, an error recorded in
-                timeline "Failed to communicate with QuickBooks due to failed to
-                get item id for invoice item ii_01JT33YM6Y05F4EXMRYGA6G1M2".
-                <div class="mt-4">
-                  <img src="../assets/debriefs/37/scr3.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                We were not able to synchronize transactions, nothing is
-                recorded in timeline. If try to synchronize manually and check
-                <a
-                  href="https://app-sandbox.rebilly.com/phronesis-alex-arman/data-tables/read-only-api-logs?filter=id:554f9f9f-d9a7-44d0-9122-1f944dd18d3b,97f69589-037b-4d81-9407-e154511db109"
-                  target="_blank"
-                  >API logs</a
-                >: First request "POST
-                https://api-sandbox.rebilly.com/transactions/txn_01JT33Z6NA2314SXADZ3HVHX9H/external-identifiers/quickbooks-online"
-                returns 204, but second request "GET
-                https://api-sandbox.rebilly.com/transactions/txn_01JT33Z6NA2314SXADZ3HVHX9H/external-identifiers/quickbooks-online"
-                returns 404.
               </li>
             </ul>
           </div>
