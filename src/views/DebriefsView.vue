@@ -8,6 +8,65 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse42"
+          aria-expanded="true"
+          aria-controls="collapse42"
+        >
+          Project 42: Email invoices
+        </button>
+      </h2>
+      <div
+        id="collapse42"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arman, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>
+              Team work, we've configured email notifications and confirmed that
+              payment link (placeholder "invoice.paymentFormUrl") works. For the
+              invice issued notification we used condition
+              "/invoice/type:initial".
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                There is no placeholder for organization logo, so we used
+                placeholder "invoice.website.logoUrl" for website logo URL
+                instead.
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Invoice paid event payload and invoice entity payload do not
+                contain any order details like renewal time, so there is no way
+                to include the date of the next renewal payment in email body.
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-info text-dark">Suggestion</span></p>
+                Perhaps we should add templates for all email notifications
+                events or most used ones, so users can use them, change them,
+                instead of trying to figure out which placeholder to use.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse41"
           aria-expanded="true"
           aria-controls="collapse41"
@@ -17,7 +76,7 @@
       </h2>
       <div
         id="collapse41"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -245,101 +304,6 @@
                     amount due
                   </p>
                   <img src="../assets/debriefs/39/scr9.png" />
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse38"
-          aria-expanded="true"
-          aria-controls="collapse38"
-        >
-          Project 38: PayPal
-        </button>
-      </h2>
-      <div
-        id="collapse38"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>
-              Team work, we connected PayPal and made initial invoice payments,
-              and early issued renewal invoice was autopaid.
-            </p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                <a
-                  href="https://www.rebilly.com/docs/settings/add-paypal-account#1.-locate-your-sandbox-log-in-credentials"
-                  target="_blank"
-                  >Docs</a
-                >
-                about how to connect PayPal to Rebilly sandbox are not clear and
-                confusing. At first we tried login email/password of the
-                developer PayPal account, it onboarded successfully but we were
-                not able to make payments because payment agreement token was
-                missing then we figured out that we need to use email/password
-                found on PayPal "Sandbox accounts" page.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/38/scr1.png" />
-                </div>
-                <div class="mt-4">
-                  <img src="../assets/debriefs/38/scr2.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                It is not clear how to test sandbox PayPal payments. Docs don't
-                mention that information but you need to use creds from PayPal
-                "Sandbox accounts" page as before.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/38/scr3.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                After PayPal was successfully onboarded the user got redirected
-                to gateway account data tables instead of particular gateway
-                which was connected. Is it a bug or intentional?
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                After we made payment via hosted payment form which was
-                initiated on customer page "Collect payment" we immediately got
-                redirected and there was no confirmation that payment was
-                successful or not successful. When we tried instruments then we
-                got that confirmation.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/38/scr4.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                PayPal instruments are duplicating after each payment.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/38/scr5.png" />
-                </div>
-                <div class="mt-4">
-                  <img src="../assets/debriefs/38/scr6.png" />
                 </div>
               </li>
             </ul>
