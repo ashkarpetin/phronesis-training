@@ -8,6 +8,76 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse43"
+          aria-expanded="true"
+          aria-controls="collapse43"
+        >
+          Project 43: Cancellations
+        </button>
+      </h2>
+      <div
+        id="collapse43"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arman, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Checkbox "Add pro rata credit" seems should be placed near
+                "Now".
+                <div class="mt-4">
+                  <img src="../assets/debriefs/43/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-info text-dark">Confused</span></p>
+                When cancelling subscription with pro rata credit a cancellation
+                invoice with negative amount is created. Credit memo should be
+                created automatically or there should be way to issue a refund
+                from the invoice.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/43/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Recomm shows invoice total "0" although total is negative
+                "-3.24".
+                <div class="mt-4">
+                  <img src="../assets/debriefs/43/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Seems credit memo are always applied automatically to renewal
+                invoice during autopay, and there is no way to disable it for
+                particular credit memo or for all credit memo. For example, what
+                if merchant does not want credit memo to be applied
+                automatically?
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse42"
           aria-expanded="true"
           aria-controls="collapse42"
@@ -17,7 +87,7 @@
       </h2>
       <div
         id="collapse42"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -197,113 +267,6 @@
                 ID for multi-organization merchants.
                 <div class="mt-4">
                   <img src="../assets/debriefs/40/scr2.png" />
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse39"
-          aria-expanded="true"
-          aria-controls="collapse39"
-        >
-          Project 39: Change orders
-        </button>
-      </h2>
-      <div
-        id="collapse39"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>Team work</p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                "Edit items" button is hard to find on the page. We forgot how
-                to create a change quoted and it took us some time to figure out
-                how to create it. Maybe place the button to a more visible place
-                to the right button section?
-                <div class="mt-4">
-                  <img src="../assets/debriefs/39/scr1.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                It is not obvious that "Save" and "Create a quote" buttons
-                produce different results. There probably should be a checkbox
-                to select edit items via quote or directly and single button
-                "Save".
-                <div class="mt-4">
-                  <img src="../assets/debriefs/39/scr2.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                We've replaced one item with another but timeline shows like
-                there was 2 items (Item #1 and Item #2), not very obvious. Maybe
-                it is intentional? Or is it bug?
-                <div class="mt-4">
-                  <img src="../assets/debriefs/39/scr3.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Recomm shows "Subscription not found" error toast after creating
-                an order which confusing. This happens because of the order ETL
-                delay in sandbox, OS index is not updated yet, so GET call
-                "/experimental/subscriptions/ord_01JV9YH0PGSP30E8TNY5CPZGMV/summary-metrics"
-                returns 404. But this should be handled gracefully by Recomm,
-                and not result in such error.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/39/scr4.png" />
-                </div>
-                <div class="mt-4">
-                  <img src="../assets/debriefs/39/scr5.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                After customer accepted and paid quote, the order autopay has
-                been disabled. Quote page does not indicated that.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/39/scr6.png" />
-                </div>
-                <div class="mt-4">
-                  <img src="../assets/debriefs/39/scr7.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                We upgraded to expert training, then downgraded back to beginner
-                with effective time "now" and it produced strange result.
-                <div class="mt-4">
-                  <p>Payment page shows a negative amount with error</p>
-                  <img src="../assets/debriefs/39/scr8.png" />
-                </div>
-                <div class="mt-4">
-                  <p>
-                    Quotation interim invoice shows negative subtotal and $0
-                    amount due
-                  </p>
-                  <img src="../assets/debriefs/39/scr9.png" />
                 </div>
               </li>
             </ul>
