@@ -8,6 +8,82 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse44"
+          aria-expanded="true"
+          aria-controls="collapse44"
+        >
+          Project 44: Cancellations (again)
+        </button>
+      </h2>
+      <div
+        id="collapse44"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arman, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>
+              Team work, with enabled feature a credit memo is created
+              automatically.
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Bug</span></p>
+                Incorrect validation error message, should be "Amount must be
+                less than or equal to 50".
+                <div class="mt-4">
+                  <img src="../assets/debriefs/44/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Bug</span></p>
+                Sometimes validation error does not show up, and nothing happens
+                when clicking on "Apply credit memo" button.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/44/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Credit memo are always applied automatically to renewal invoice
+                during autopay, and there is no way to disable it for particular
+                credit memo or for all credit memos. So we might want to
+                introduce a setting on organization level and on credit memo
+                level.
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-info text-dark">Suggestion</span></p>
+                It would be nice to render available (issued and partially
+                applied) credit memo list and balance on customer details page
+                instead of opening a credit memo segment and filter by customer
+                ID. Right now credit memo events are only shown in customer
+                timeline but it is hard to track them.
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                When credit memo allocation is removed from invoice it is not
+                shown on invoice timeline.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse43"
           aria-expanded="true"
           aria-controls="collapse43"
@@ -17,7 +93,7 @@
       </h2>
       <div
         id="collapse43"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
