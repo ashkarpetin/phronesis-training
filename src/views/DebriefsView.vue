@@ -38,7 +38,8 @@
               <li class="mb-2">
                 <p><span class="badge bg-warning text-dark">Bug</span></p>
                 Incorrect validation error message, should be "Amount must be
-                less than or equal to 50".
+                less than or equal to 50" (GH ticket:
+                https://github.com/Rebilly/rebilly/issues/13019).
                 <div class="mt-4">
                   <img src="../assets/debriefs/44/scr1.png" />
                 </div>
