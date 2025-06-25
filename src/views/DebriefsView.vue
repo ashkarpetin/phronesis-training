@@ -8,6 +8,97 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse45"
+          aria-expanded="true"
+          aria-controls="collapse45"
+        >
+          Project 45: Extending resources
+        </button>
+      </h2>
+      <div
+        id="collapse45"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arman, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work, we've completed it pretty fast.</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                "Label" label in Recomm is confusing, because we have only
+                "name" in the API, and it does not allow spaces. If you fill
+                label with spaces like "My test field" Recomm will save it under
+                "My-test-field" name which is not obvious. So we probably should
+                not silently convert spaces to hyphens, and properly validate
+                label and show error message instead.
+                <p>
+                  <a
+                    href="https://www.rebilly.com/catalog/all/custom-fields/putcustomfield#custom-fields/putcustomfield/t=request&in=path&path=name"
+                    target="_blank"
+                    >API docs</a
+                  >
+                </p>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/45/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Bug</span></p>
+                Additional custom field schema "Required" seems does not work.
+                We created a customer and order without any custom fields, and
+                did not get any errors.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/45/scr2.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/45/scr3.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Bug</span></p>
+                We have custom field of array type with allowed values defined.
+                Clicking on "Add default value" clears allowed values, and seems
+                breaks the form, the button does not work after that.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/45/scr4.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/45/scr5.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Bug</span></p>
+                Additional custom field schema "Default" seems does not work. We
+                created a customer and order without any custom fields, and no
+                default values were set.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/45/scr6.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/45/scr7.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse44"
           aria-expanded="true"
           aria-controls="collapse44"
@@ -17,7 +108,7 @@
       </h2>
       <div
         id="collapse44"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -201,150 +292,6 @@
                 Perhaps we should add templates for all email notifications
                 events or most used ones, so users can use them, change them,
                 instead of trying to figure out which placeholder to use.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse41"
-          aria-expanded="true"
-          aria-controls="collapse41"
-        >
-          Project 41: Taxes
-        </button>
-      </h2>
-      <div
-        id="collapse41"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>Team work, taxes worked, we did it pretty fast.</p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Rebilly tax
-                <a href="https://www.rebilly.com/docs/settings/taxes">docs</a>
-                and Recomm are not clear enough about automatic tax calculation
-                and tax locations feature. Our organization country was not set
-                to US, and tax location was not displayed. Then we found another
-                another guide
-                <a
-                  href="https://www.rebilly.com/docs/settings/organizations-and-websites#manage-tax-locations"
-                  >here</a
-                >
-                which mentions "This feature is only available to US-based
-                organizations.", after chaning country to US, we were able to
-                configure tax locations.
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Broken links on the
-                <a href="https://www.rebilly.com/docs/settings/taxes">docs</a>
-                page:
-                <p>
-                  1. Has description "Manage the tax ID numbers of an
-                  organization" but leads to tax locations.
-                </p>
-                <p>2. Broken link anchor.</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse40"
-          aria-expanded="true"
-          aria-controls="collapse40"
-        >
-          Project 40: Lead source attribution
-        </button>
-      </h2>
-      <div
-        id="collapse40"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>
-              Team work, we were able to record lead source attributes via
-              hosted payment form and Instruments library by adding UTM fields
-              to the query string.
-            </p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Rebilly docs mention that FramePay supports lead source. But as
-                we tested and confirmed it is supported by Instruments library
-                and hosted payment form too. So it is not documented well in our
-                docs, and is confusing for users.
-                <p>
-                  <a
-                    href="https://www.rebilly.com/docs/tutorials/lead-source-attribution#integration"
-                    >https://www.rebilly.com/docs/tutorials/lead-source-attribution#integration</a
-                  >
-                </p>
-                <p>
-                  This page is located in the FramePay section of the docs so it
-                  hard to find which attributes are supported.
-                  <a href="https://www.rebilly.com/docs/dev-docs/lead-sources"
-                    >https://www.rebilly.com/docs/dev-docs/lead-sources</a
-                  >
-                </p>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Seems Cashier library and deposit form does not support lead
-                source attribution.
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Lead source attribute values are being truncated too severely,
-                resulting in very short entries in Recomm.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/40/scr1.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Data export URL in email may be adjusted to include organization
-                ID for multi-organization merchants.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/40/scr2.png" />
-                </div>
               </li>
             </ul>
           </div>
