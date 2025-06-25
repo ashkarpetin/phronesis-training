@@ -77,14 +77,27 @@
               </li>
               <li class="mb-2">
                 <p><span class="badge bg-danger">Bug</span></p>
-                Additional custom field schema "Default" seems does not work. We
-                created a customer and order without any custom fields, and no
-                default values were set.
+                Additional custom field schema "Default value" seems does not
+                work. We created a customer and order without any custom fields,
+                and no default values were set.
                 <div class="mt-4">
                   <img src="../assets/debriefs/45/scr6.png" />
                 </div>
                 <div class="mt-4">
                   <img src="../assets/debriefs/45/scr7.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Unable to clear default value for boolean type field. There is a
+                clear difference between those custom fields values:
+                <ul>
+                  <li>"{"customFields":{"isActive":true}}"</li>
+                  <li>"{"customFields":{"isActive":false}}"</li>
+                  <li>"{"customFields":{}}"</li>
+                </ul>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/45/scr8.png" />
                 </div>
               </li>
             </ul>
