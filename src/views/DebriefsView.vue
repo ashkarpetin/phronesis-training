@@ -52,7 +52,7 @@
                 </div>
               </li>
               <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Bug</span></p>
+                <p><span class="badge bg-danger">Bug</span></p>
                 Additional custom field schema "Required" seems does not work.
                 We created a customer and order without any custom fields, and
                 did not get any errors.
@@ -64,7 +64,7 @@
                 </div>
               </li>
               <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Bug</span></p>
+                <p><span class="badge bg-danger">Bug</span></p>
                 We have custom field of array type with allowed values defined.
                 Clicking on "Add default value" clears allowed values, and seems
                 breaks the form, the button does not work after that.
@@ -76,7 +76,7 @@
                 </div>
               </li>
               <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Bug</span></p>
+                <p><span class="badge bg-danger">Bug</span></p>
                 Additional custom field schema "Default" seems does not work. We
                 created a customer and order without any custom fields, and no
                 default values were set.
