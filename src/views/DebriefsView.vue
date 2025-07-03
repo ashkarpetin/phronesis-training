@@ -8,6 +8,100 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse46"
+          aria-expanded="true"
+          aria-controls="collapse46"
+        >
+          Project 46: Revenue recognition
+        </button>
+      </h2>
+      <div
+        id="collapse46"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Arman, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>
+              Team work, it did not take long to complete, journal records are
+              created automatically.
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Revenue recognition in
+                <a
+                  href="https://www.rebilly.com/docs/tutorials/tax-management#revenue-recognition"
+                  target="_blank"
+                  >docs</a
+                >
+                is placed under "Tax management", it seems belongs to
+                accounting.
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                A lot of duplicate columns in journal entries data tables.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/46/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-info text-dark">Suggestion</span></p>
+                Maybe allow to assign journal accounts for products on journal
+                accounts settings page. Otherwise, you need to create all
+                accounts first, then go to product, find each product and assign
+                accounts for each product. Right now journal accounts settings
+                page seems not very useful, you can change name and description
+                only, no information on how many entries, etc.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/46/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Error "Something went wrong, please try again or contact
+                support" displayed after clicking "Export as CSV" button on
+                Revenue Audit data tables. No API request is made.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/46/scr3.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Clunky UI to select customer on manual journal record creation,
+                there is no autocomplete. You have to enter search word, and
+                then click "Search".
+                <div class="mt-4">
+                  <img src="../assets/debriefs/46/scr4.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Clicking on "External identifiers" link refreshes the Journal entry data tables for some reason.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/46/scr5.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse45"
           aria-expanded="true"
           aria-controls="collapse45"
@@ -17,7 +111,7 @@
       </h2>
       <div
         id="collapse45"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -246,65 +340,6 @@
                 particular credit memo or for all credit memo. For example, what
                 if merchant does not want credit memo to be applied
                 automatically?
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse42"
-          aria-expanded="true"
-          aria-controls="collapse42"
-        >
-          Project 42: Email invoices
-        </button>
-      </h2>
-      <div
-        id="collapse42"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>
-              Team work, we've configured email notifications and confirmed that
-              payment link (placeholder "invoice.paymentFormUrl") works. For the
-              invice issued notification we used condition
-              "/invoice/type:initial".
-            </p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                There is no placeholder for organization logo, so we used
-                placeholder "invoice.website.logoUrl" for website logo URL
-                instead.
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Invoice paid event payload and invoice entity payload do not
-                contain any order details like renewal time, so there is no way
-                to include the date of the next renewal payment in email body.
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-info text-dark">Suggestion</span></p>
-                Perhaps we should add templates for all email notifications
-                events or most used ones, so users can use them, change them,
-                instead of trying to figure out which placeholder to use.
               </li>
             </ul>
           </div>
