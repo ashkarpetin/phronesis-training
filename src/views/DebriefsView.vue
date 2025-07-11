@@ -8,6 +8,102 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse47"
+          aria-expanded="true"
+          aria-controls="collapse47"
+        >
+          Project 47: Marketing emails
+        </button>
+      </h2>
+      <div
+        id="collapse47"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Bogdan, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work, first time doing training together.</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Placeholders list is empty for email content.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/47/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Title can be moved from message content block to the very top,
+                at first we confused it with email subject.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/47/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-info text-dark">Suggestion</span></p>
+                Maybe show placeholders list for email subject, otherwise you
+                have to select and copy/paste from email content.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/47/scr3.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                "Send date" in local timezone is not properly converted to UTC
+                timezone, resulting in wrong datetime recorded.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/47/scr4.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/47/scr5.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Email broadcasts are processed every hour at 13:00, 14:00, etc
+                which causes confusion. We've configured email to be sent 5
+                minutes later creation, but it was sent an hour later.
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Email content editor UI looks clunky with strange text indents
+                and grey line.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/47/scr6.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                In some cases tabs are not removed after removing split test
+                version.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/47/scr7.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-info text-dark">Suggestion</span></p>
+                It would be nice to have a way to repeat completed campaign
+                again without need to create and configure it again.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse46"
           aria-expanded="true"
           aria-controls="collapse46"
@@ -17,7 +113,7 @@
       </h2>
       <div
         id="collapse46"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -85,7 +181,8 @@
               </li>
               <li class="mb-2">
                 <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Clicking on "External identifiers" link refreshes the Journal entry data tables for some reason.
+                Clicking on "External identifiers" link refreshes the Journal
+                entry data tables for some reason.
                 <div class="mt-4">
                   <img src="../assets/debriefs/46/scr5.png" />
                 </div>
@@ -270,76 +367,6 @@
                 <p><span class="badge bg-warning text-dark">Confused</span></p>
                 When credit memo allocation is removed from invoice it is not
                 shown on invoice timeline.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse43"
-          aria-expanded="true"
-          aria-controls="collapse43"
-        >
-          Project 43: Cancellations
-        </button>
-      </h2>
-      <div
-        id="collapse43"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>Team work</p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Checkbox "Add pro rata credit" seems should be placed near
-                "Now".
-                <div class="mt-4">
-                  <img src="../assets/debriefs/43/scr1.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-info text-dark">Confused</span></p>
-                When cancelling subscription with pro rata credit a cancellation
-                invoice with negative amount is created. Credit memo should be
-                created automatically or there should be way to issue a refund
-                from the invoice.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/43/scr2.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Recomm shows invoice total "0" although total is negative
-                "-3.24".
-                <div class="mt-4">
-                  <img src="../assets/debriefs/43/scr2.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Seems credit memo are always applied automatically to renewal
-                invoice during autopay, and there is no way to disable it for
-                particular credit memo or for all credit memo. For example, what
-                if merchant does not want credit memo to be applied
-                automatically?
               </li>
             </ul>
           </div>
