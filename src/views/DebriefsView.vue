@@ -8,6 +8,97 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse48"
+          aria-expanded="true"
+          aria-controls="collapse48"
+        >
+          Project 48: Custom webhooks
+        </button>
+      </h2>
+      <div
+        id="collapse48"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Bogdan, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work.</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Missing placeholders list, we had to copy placeholders from
+                email notifications.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/48/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Placeholders list in email notifications is too narrow. Long
+                placeholders are truncated, making them difficult to read and
+                navigate.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/48/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                We were unable to make product custom fields placeholders
+                working, so we added custom fields on plan and used
+                "subscription.items.0.plan.customFields.crm_product_code"
+                placeholder. It is not clear from training docs which custom
+                fields to use.
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                "Subscription -> Plan" conditions are incorrect and not working.
+                <a
+                  href="https://www.rebilly.com/catalog/all/orders/getsubscription"
+                  target="_blank"
+                  >Subscription resource</a
+                >
+                does not have field or embedded object with "plan" name, looks
+                like it is hardcoded in Recomm.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/48/scr3.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Placeholders for subscription embedded (recentInvoice,
+                initialInvoice, shippingRate, paymentInstrument,
+                upcomingInvoice) are missing in the placholders list. We
+                manually used "subscription.initialInvoice.amount" and
+                "subscription.initialInvoice.currency" placeholders and it
+                worked, because we checked
+                <a
+                  href="https://www.rebilly.com/catalog/all/orders/getsubscription#orders/getsubscription/t=response&c=200&path=&d=0/_embedded/initialinvoice"
+                  >API docs</a
+                >.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/48/scr4.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse47"
           aria-expanded="true"
           aria-controls="collapse47"
@@ -17,7 +108,7 @@
       </h2>
       <div
         id="collapse47"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -290,83 +381,6 @@
                 <div class="mt-4">
                   <img src="../assets/debriefs/45/scr8.png" />
                 </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse44"
-          aria-expanded="true"
-          aria-controls="collapse44"
-        >
-          Project 44: Cancellations (again)
-        </button>
-      </h2>
-      <div
-        id="collapse44"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>
-              Team work, with enabled feature a credit memo is created
-              automatically.
-            </p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Bug</span></p>
-                Incorrect validation error message, should be "Amount must be
-                less than or equal to 50" (GH ticket:
-                https://github.com/Rebilly/rebilly/issues/13019).
-                <div class="mt-4">
-                  <img src="../assets/debriefs/44/scr1.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Bug</span></p>
-                Sometimes validation error does not show up, and nothing happens
-                when clicking on "Apply credit memo" button.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/44/scr2.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Credit memo are always applied automatically to renewal invoice
-                during autopay, and there is no way to disable it for particular
-                credit memo or for all credit memos. So we might want to
-                introduce a setting on organization level and on credit memo
-                level.
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-info text-dark">Suggestion</span></p>
-                It would be nice to render available (issued and partially
-                applied) credit memo list and balance on customer details page
-                instead of opening a credit memo segment and filter by customer
-                ID. Right now credit memo events are only shown in customer
-                timeline but it is hard to track them.
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                When credit memo allocation is removed from invoice it is not
-                shown on invoice timeline.
               </li>
             </ul>
           </div>
