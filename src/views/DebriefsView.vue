@@ -8,6 +8,71 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse49"
+          aria-expanded="true"
+          aria-controls="collapse49"
+        >
+          Project 49: Segments
+        </button>
+      </h2>
+      <div
+        id="collapse49"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Bogdan, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work, we were able to complete the project pretty fast.</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                25 characters limit for grid segment title seems too short.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/49/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                When you share a link to a grid segment or data table with a
+                filter that includes two consecutive dots (..) via Slack or
+                another app, it may not work as expected because the application
+                does not recognize the final two dots as part of the URL. For
+                example, we had a link with query params
+                "?filter=lifetimeRevenue/amount:300.." meaning greater or equals
+                to 300, but after opening the link from Slack it became
+                "?filter=lifetimeRevenue/amount:300" meaning equals to 300.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/49/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                When a user opens a grid segment link they don't have access to,
+                instead of displaying an "Access Denied" error, Recomm shows a
+                default customer segment. This can be confusing for users,
+                especially when a shared link leads to a segment they aren't
+                authorized to view.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse48"
           aria-expanded="true"
           aria-controls="collapse48"
@@ -17,7 +82,7 @@
       </h2>
       <div
         id="collapse48"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -276,110 +341,6 @@
                 entry data tables for some reason.
                 <div class="mt-4">
                   <img src="../assets/debriefs/46/scr5.png" />
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse45"
-          aria-expanded="true"
-          aria-controls="collapse45"
-        >
-          Project 45: Extending resources
-        </button>
-      </h2>
-      <div
-        id="collapse45"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>Team work, we've completed it pretty fast.</p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                "Label" label in Recomm is confusing, because we have only
-                "name" in the API, and it does not allow spaces. If you fill
-                label with spaces like "My test field" Recomm will save it under
-                "My-test-field" name which is not obvious. So we probably should
-                not silently convert spaces to hyphens, and properly validate
-                label and show error message instead.
-                <p>
-                  <a
-                    href="https://www.rebilly.com/catalog/all/custom-fields/putcustomfield#custom-fields/putcustomfield/t=request&in=path&path=name"
-                    target="_blank"
-                    >API docs</a
-                  >
-                </p>
-                <div class="mt-4">
-                  <img src="../assets/debriefs/45/scr1.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Additional custom field schema "Required" seems does not work.
-                We created a customer and order without any custom fields, and
-                did not get any errors.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/45/scr2.png" />
-                </div>
-                <div class="mt-4">
-                  <img src="../assets/debriefs/45/scr3.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                We have custom field of array type with allowed values defined.
-                Clicking on "Add default value" clears allowed values, and seems
-                breaks the form, the button does not work after that.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/45/scr4.png" />
-                </div>
-                <div class="mt-4">
-                  <img src="../assets/debriefs/45/scr5.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Additional custom field schema "Default value" seems does not
-                work. We created a customer and order without any custom fields,
-                and no default values were set.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/45/scr6.png" />
-                </div>
-                <div class="mt-4">
-                  <img src="../assets/debriefs/45/scr7.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Unable to clear default value for boolean type field. There is a
-                clear difference between those custom fields values:
-                <ul>
-                  <li>"{"customFields":{"isActive":true}}"</li>
-                  <li>"{"customFields":{"isActive":false}}"</li>
-                  <li>"{"customFields":{}}"</li>
-                </ul>
-                <div class="mt-4">
-                  <img src="../assets/debriefs/45/scr8.png" />
                 </div>
               </li>
             </ul>
