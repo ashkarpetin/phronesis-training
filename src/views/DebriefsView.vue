@@ -8,6 +8,59 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse50"
+          aria-expanded="true"
+          aria-controls="collapse50"
+        >
+          Project 50: Automated tagging
+        </button>
+      </h2>
+      <div
+        id="collapse49"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Bogdan, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work, short project.</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Subsciptions are paused every 10 minutes, while pauses are
+                canceled immediately. It might be confusing for users when you
+                pause subscription with effective time "now", but it is paused
+                after 10 minutes.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/50/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Incorrect description in Recomm because automated tagging
+                supports only customer tags.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/50/scr2.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse49"
           aria-expanded="true"
           aria-controls="collapse49"
@@ -17,7 +70,7 @@
       </h2>
       <div
         id="collapse49"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
@@ -248,100 +301,6 @@
                 <p><span class="badge bg-info text-dark">Suggestion</span></p>
                 It would be nice to have a way to repeat completed campaign
                 again without need to create and configure it again.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <h2 class="accordion-header">
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#collapse46"
-          aria-expanded="true"
-          aria-controls="collapse46"
-        >
-          Project 46: Revenue recognition
-        </button>
-      </h2>
-      <div
-        id="collapse46"
-        class="accordion-collapse collapse"
-        data-bs-parent="#debriefs"
-      >
-        <div class="accordion-body">
-          <div>
-            <strong>Which teammates executed the project?</strong>
-            <p>Arman, Alex Sh</p>
-          </div>
-          <div>
-            <strong>What made you smile?</strong>
-            <p>
-              Team work, it did not take long to complete, journal records are
-              created automatically.
-            </p>
-          </div>
-          <div>
-            <strong>What did you find confusing?</strong>
-            <ul>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Revenue recognition in
-                <a
-                  href="https://www.rebilly.com/docs/tutorials/tax-management#revenue-recognition"
-                  target="_blank"
-                  >docs</a
-                >
-                is placed under "Tax management", it seems belongs to
-                accounting.
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                A lot of duplicate columns in journal entries data tables.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/46/scr1.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-info text-dark">Suggestion</span></p>
-                Maybe allow to assign journal accounts for products on journal
-                accounts settings page. Otherwise, you need to create all
-                accounts first, then go to product, find each product and assign
-                accounts for each product. Right now journal accounts settings
-                page seems not very useful, you can change name and description
-                only, no information on how many entries, etc.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/46/scr2.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-danger">Bug</span></p>
-                Error "Something went wrong, please try again or contact
-                support" displayed after clicking "Export as CSV" button on
-                Revenue Audit data tables. No API request is made.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/46/scr3.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Clunky UI to select customer on manual journal record creation,
-                there is no autocomplete. You have to enter search word, and
-                then click "Search".
-                <div class="mt-4">
-                  <img src="../assets/debriefs/46/scr4.png" />
-                </div>
-              </li>
-              <li class="mb-2">
-                <p><span class="badge bg-warning text-dark">Confused</span></p>
-                Clicking on "External identifiers" link refreshes the Journal
-                entry data tables for some reason.
-                <div class="mt-4">
-                  <img src="../assets/debriefs/46/scr5.png" />
-                </div>
               </li>
             </ul>
           </div>
