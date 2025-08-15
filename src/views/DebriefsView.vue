@@ -102,6 +102,15 @@
                   >
                 </div>
 
+                <div>
+                  Fixed by
+                  <a
+                    target="_blank"
+                    href="https://github.com/Rebilly/rebilly/pull/14241"
+                    >https://github.com/Rebilly/rebilly/pull/14241</a
+                  >
+                </div>
+
                 <div class="mt-4">
                   <img src="../assets/debriefs/52/scr8.png" />
                 </div>
@@ -133,6 +142,15 @@
                     target="_blank"
                     href="https://app-sandbox.rebilly.com/yet-another-training-org/transactions/txn_01K2PK8FKYJB99VFPXRXNHG4ZN"
                     >https://app-sandbox.rebilly.com/yet-another-training-org/transactions/txn_01K2PK8FKYJB99VFPXRXNHG4ZN</a
+                  >
+                </div>
+
+                <div>
+                  Fixed by
+                  <a
+                    target="_blank"
+                    href="https://github.com/Rebilly/rebilly/pull/14236"
+                    >https://github.com/Rebilly/rebilly/pull/14236</a
                   >
                 </div>
 
