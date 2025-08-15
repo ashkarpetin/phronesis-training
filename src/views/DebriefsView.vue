@@ -8,6 +8,152 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse52"
+          aria-expanded="true"
+          aria-controls="collapse52"
+        >
+          Project 52: Risk scores
+        </button>
+      </h2>
+      <div
+        id="collapse52"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Bogdan, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work.</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Cannot set infinite max value. Min and max are required. So for
+                requirement "customer's lifetime is $100 or more" you need to
+                set min to 100 and max to some random big value 999999.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/52/scr1.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/52/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Recomm validation message seems contains extra empty line.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/52/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-info text-dark">Suggestion</span></p>
+                Might be helpful to be able to specify "Temporary block
+                duration" in minutes/hours/days.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/52/scr3.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Button "Show more rows" hides only single row which looks
+                strange.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/52/scr4.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/52/scr5.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Seems we don't record negative risk score on transaction, only
+                >0.
+                <div>
+                  <a
+                    target="_blank"
+                    href="https://app-sandbox.rebilly.com/yet-another-training-org/transactions/txn_01K2PJAQ0EZMY7CK46SBV04V9H"
+                    >https://app-sandbox.rebilly.com/yet-another-training-org/transactions/txn_01K2PJAQ0EZMY7CK46SBV04V9H</a
+                  >
+                </div>
+
+                <div class="mt-4">
+                  <img src="../assets/debriefs/52/scr6.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/52/scr7.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Seems Recomm and backend don't validate properly if the value is
+                integer, backend returns 500 when float is passed.
+
+                <div>
+                  <a
+                    target="_blank"
+                    href="https://sentry.rebilly.com/rebilly/rebilly-app/issues/34278/?environment=sandbox"
+                    >https://sentry.rebilly.com/rebilly/rebilly-app/issues/34278/?environment=sandbox</a
+                  >
+                </div>
+
+                <div class="mt-4">
+                  <img src="../assets/debriefs/52/scr8.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-info text-dark">Suggestion</span></p>
+                Risk score simulated transaction does not show new calculated
+                risk score, might be helpful to have it.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/52/scr9.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-danger">Bug</span></p>
+                Risk factor "Customer lifetime value" is not evaluated
+                correctly. Customer has lifetime value $4 USD but transaction
+                risk score assigned to 10.
+
+                <div>
+                  <a
+                    target="_blank"
+                    href="https://app-sandbox.rebilly.com/yet-another-training-org/customers/test-risk-score"
+                    >https://app-sandbox.rebilly.com/yet-another-training-org/customers/test-risk-score</a
+                  >
+                </div>
+
+                <div>
+                  <a
+                    target="_blank"
+                    href="https://app-sandbox.rebilly.com/yet-another-training-org/transactions/txn_01K2PK8FKYJB99VFPXRXNHG4ZN"
+                    >https://app-sandbox.rebilly.com/yet-another-training-org/transactions/txn_01K2PK8FKYJB99VFPXRXNHG4ZN</a
+                  >
+                </div>
+
+                <div class="mt-4">
+                  <img src="../assets/debriefs/52/scr10.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/52/scr11.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse50"
           aria-expanded="true"
           aria-controls="collapse50"
@@ -16,8 +162,8 @@
         </button>
       </h2>
       <div
-        id="collapse49"
-        class="accordion-collapse collapse show"
+        id="collapse50"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
