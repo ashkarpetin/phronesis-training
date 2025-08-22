@@ -8,6 +8,67 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse53"
+          aria-expanded="true"
+          aria-controls="collapse53"
+        >
+          Project 53: Free trials
+        </button>
+      </h2>
+      <div
+        id="collapse53"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Bogdan, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>
+              Team work. We created a quote for a customer with overriden 7 days
+              plan trial $0 and acceptance condition "Payment"
+            </p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                We defined 7 days free trial, but there is no clear information
+                about trial period on customer quote page.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/53/scr1.png" />
+                </div>
+                <div class="mt-4">
+                  <img src="../assets/debriefs/53/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                There is a confusing message in customer timeline "Quote modifed
+                by customer" when customer clicks "Accept and pay quote" button
+                or rejects it. It seems quote status change by customer should
+                not be considered as quote modification, because there is
+                already separate event for that.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/53/scr3.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse52"
           aria-expanded="true"
           aria-controls="collapse52"
@@ -17,7 +78,7 @@
       </h2>
       <div
         id="collapse52"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
