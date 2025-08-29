@@ -28,7 +28,7 @@ async function initDeposit() {
     customerId = customer.id;
   }
 
-  const { fields: depositRequest } = await rebillyApi.depositRequests.create({
+  const { fields: depositRequest } = await rebillyApi.cashiers.create({
     data: {
       websiteId: APP_CONFIG.websiteId,
       customerId: customerId,

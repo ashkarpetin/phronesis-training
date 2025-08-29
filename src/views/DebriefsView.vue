@@ -8,6 +8,98 @@
           class="accordion-button"
           type="button"
           data-bs-toggle="collapse"
+          data-bs-target="#collapse54"
+          aria-expanded="true"
+          aria-controls="collapse54"
+        >
+          Project 54: Deposits (third time)
+        </button>
+      </h2>
+      <div
+        id="collapse54"
+        class="accordion-collapse collapse show"
+        data-bs-parent="#debriefs"
+      >
+        <div class="accordion-body">
+          <div>
+            <strong>Which teammates executed the project?</strong>
+            <p>Bogdan, Alex Sh</p>
+          </div>
+          <div>
+            <strong>What made you smile?</strong>
+            <p>Team work.</p>
+          </div>
+          <div>
+            <strong>What did you find confusing?</strong>
+            <ul>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Bug</span></p>
+                Missing padding.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/54/scr1.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Bug</span></p>
+                Weird UI when no favourite payment methods.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/54/scr2.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                UX with base amounts and increments is still weird. To display
+                buttons 50, 100, 250, 500, and 1,000 you need to configure
+                increments as 50, 200, 450, 950.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/54/scr3.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Seems there is no order can be defined for strategy when
+                multiple strategies apply for customer. Seems first one defined
+                is selected? To change order you need to delete and create
+                again?
+                <div class="mt-4">
+                  <img src="../assets/debriefs/54/scr4.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                Since we cannot control the order of strategies, we tried to use
+                filters. But deposit strategy filters in Recomm missing many
+                operations compare to filters in Rules engine (like NOT IN, NOT
+                IN LIST, etc). So we were not able to add filter "customer tags
+                not in VIP".
+                <div class="mt-4">
+                  <img src="../assets/debriefs/54/scr5.png" />
+                </div>
+              </li>
+              <li class="mb-2">
+                <p><span class="badge bg-warning text-dark">Confused</span></p>
+                We spent some time to figure out how to configure that the rule
+                "The maximum deposit amount for a single deposit for the Interac
+                payment instrument is $1,000." should be configured in rules
+                engine for "Ready to pay requested", not very obvious and
+                confusing for merchants. We had to configure 2 rules, maybe UI
+                can be improved.
+                <div class="mt-4">
+                  <img src="../assets/debriefs/54/scr6.png" />
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button
+          class="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#collapse53"
           aria-expanded="true"
           aria-controls="collapse53"
@@ -17,7 +109,7 @@
       </h2>
       <div
         id="collapse53"
-        class="accordion-collapse collapse show"
+        class="accordion-collapse collapse"
         data-bs-parent="#debriefs"
       >
         <div class="accordion-body">
